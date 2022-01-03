@@ -1,0 +1,52 @@
+{
+    "d6850eee-4e67-40bf-9bc5-a991665d4468": {
+        "id": "d6850eee-4e67-40bf-9bc5-a991665d4468",
+        "name": "Startpage",
+        "keyword": "sp",
+        "cmd": "firefox-developer-edition \"https://www.startpage.com/do/search?query=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "icon": "~/.icons/rpixae7jcvee2gsddtlg.webp",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1629473541.2947898
+    },
+    "e5a8a09d-5b29-43fb-8417-71b70464a783": {
+        "id": "e5a8a09d-5b29-43fb-8417-71b70464a783",
+        "name": "Wiktionary",
+        "keyword": "wk",
+        "cmd": "firefox-developer-edition \"https://en.wiktionary.org/w/index.php?search=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "icon": "~/.icons/Wiktionary.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1636135673.69954
+    },
+    "8c725c12-4cfe-48ee-84ef-dd207c860c2e": {
+        "id": "8c725c12-4cfe-48ee-84ef-dd207c860c2e",
+        "name": "Wikipedia",
+        "keyword": "wp",
+        "cmd": "firefox-developer-edition \"https://en.wikipedia.org/w/index.php?search=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "icon": "~/.icons/Wikipedia-logo.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1636136673.034889
+    },
+    "d68b9452-f087-4f1f-8d2b-c27d1e35647b": {
+        "id": "d68b9452-f087-4f1f-8d2b-c27d1e35647b",
+        "name": "Wolfram Alpha",
+        "keyword": "wa",
+        "cmd": "firefox-developer-edition \"https://www.wolframalpha.com/input/?i=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "icon": "/usr/share/icons/Papirus-Dark/128x128/apps/wolfram-mathematica.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1639571669.0702052
+    },
+    "8fdb178b-1531-4007-a109-dc16bc792493": {
+        "id": "8fdb178b-1531-4007-a109-dc16bc792493",
+        "name": "Translate",
+        "keyword": "tr",
+        "cmd": "firefox-developer-edition \"https://translate.yandex.ru/?lang=en-ru&text=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "icon": "/usr/share/icons/Papirus-Dark/128x128/apps/google-translate.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1639673864.8325658
+    }
+}

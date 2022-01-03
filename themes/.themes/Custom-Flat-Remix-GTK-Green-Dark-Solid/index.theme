@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Custom-Flat-Remix-GTK-Green-Dark-Solid
+Comment=Custom-Flat-Remix-GTK-Green theme
+Encoding=UTF-8
+
+
+[X-GNOME-Metatheme]
+GtkTheme=Custom-Flat-Remix-GTK-Green-Dark-Solid
+MetacityTheme=Custom-Flat-Remix-GTK-Green-Dark-Solid
+IconTheme=Custom-Flat-Remix-Green-Dark
+CursorTheme=DMZ-Black
+ButtonLayout=menu:minimize,maximize,close
