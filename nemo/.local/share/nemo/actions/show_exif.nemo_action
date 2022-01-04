@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Show EXIF
+Comment=Displays metadata
+Exec=<scripts/show_exif.sh %F>
+Icon-Name=view-hidden
+Extensions=any
+Selection=one
+EscapeSpaces=true
+Dependencies=/usr/bin/vendor_perl/exiftool;

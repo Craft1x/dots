@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Edit in Vim
+Comment=Displays metadata
+Exec=gnome-terminal -- "nvim" %F
+Icon-Name=vim
+Extensions=nodirs
+Selection=one
+EscapeSpaces=true
+Dependencies=nvim;

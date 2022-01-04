@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Flat-Remix-Theme
+Comment=Flat-Remix-Theme
+Encoding=UTF-8
+
+
+[X-GNOME-Metatheme]
+GtkTheme=Flat-Remix-Theme
+MetacityTheme=Flat-Remix-Theme
+IconTheme=Papirus-Dark
+CursorTheme=Breeze-Snow
+ButtonLayout=menu:minimize,maximize,close

@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Reduse size
+Comment=Optimizes jpeg size (lossy)
+Exec=<scripts/optimize_jpeg.sh %F>
+Icon-Name=format-font-size-less
+Selection=notnone
+Extensions=.jpeg;.jpg;
+EscapeSpaces=true
+Dependencies=jpegoptim;

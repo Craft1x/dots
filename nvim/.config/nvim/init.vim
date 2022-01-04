@@ -30,6 +30,9 @@ Plug 'phpactor/ncm2-phpactor'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+
+
+
 " Theme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " FZF file searcher
@@ -46,6 +49,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 " Colors 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -136,6 +140,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-l>"
 
 set inccommand=nosplit
+set mouse=a
 set guicursor=
 
 

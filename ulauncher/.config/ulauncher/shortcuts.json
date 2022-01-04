@@ -48,5 +48,15 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1639673864.8325658
+    },
+    "9a2b15fe-4922-46ec-abfe-7ef8cf20dd32": {
+        "id": "9a2b15fe-4922-46ec-abfe-7ef8cf20dd32",
+        "name": "Shut Down / Power Off",
+        "keyword": "Shut Down / Power Off",
+        "cmd": "poweroff",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1641237567.289349
     }
 }

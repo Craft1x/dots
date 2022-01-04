@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Send to device
+Comment=Sends files to a connected device
+Exec=kdeconnect-handler %F
+Icon-Name=kdeconnect
+Extensions=any
+Selection=nodirs
+EscapeSpaces=true
+Dependencies=kdeconnect-app;

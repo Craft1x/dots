@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Send on LAN
+Comment=Sends file using Woof
+Exec=<scripts/send_via_woof.sh %F>
+Icon-Name=document-send-symbolic
+Selection=one
+Extensions=any;
+EscapeSpaces=true
+Dependencies=woof;

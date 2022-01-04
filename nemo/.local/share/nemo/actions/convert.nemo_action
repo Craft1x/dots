@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Convert
+Comment=Convert any file
+Exec=<scripts/convert.sh %F>
+Icon-Name=gtk-convert
+Selection=notnone
+Extensions=nodirs;
+EscapeSpaces=true
+Dependencies=convert;

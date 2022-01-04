@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Remove metadata
+Comment=Removes metadata
+Exec=<scripts/delete_metadata.sh %F>
+Icon-Name=image-red-eye
+Extensions=any
+Selection=notnone
+EscapeSpaces=true
+Dependencies=/usr/bin/vendor_perl/exiftool;

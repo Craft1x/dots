@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Install APK
+Comment=Install .apk file on first connected device
+Exec=<scripts/install_apk.sh %F>
+Icon-Name=download-amarok
+Selection=one
+Extensions=.apk;
+EscapeSpaces=true
+Dependencies=adb;
