@@ -54,9 +54,29 @@
         "name": "Shut Down / Power Off",
         "keyword": "Shut Down / Power Off",
         "cmd": "poweroff",
-        "icon": null,
+        "icon": "~/.config/ulauncher/icons/power-off.png",
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1641237567.289349
+    },
+    "124842f3-5d70-46bd-983a-020438e08a64": {
+        "id": "124842f3-5d70-46bd-983a-020438e08a64",
+        "name": "Reboot / Restart",
+        "keyword": "Reboot / Restart",
+        "cmd": "reboot",
+        "icon": "~/.config/ulauncher/icons/reboot.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1641325324.089942
+    },
+    "9be11601-0307-4cbc-9f89-fc7433d9da36": {
+        "id": "9be11601-0307-4cbc-9f89-fc7433d9da36",
+        "name": "Lock Screen",
+        "keyword": "Lock Screen",
+        "cmd": "cinnamon-screensaver-command --lock",
+        "icon": "~/.config/ulauncher/icons/lock.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1641325405.8330805
     }
 }
