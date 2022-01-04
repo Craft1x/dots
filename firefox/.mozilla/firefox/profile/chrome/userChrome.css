@@ -1,0 +1,28 @@
+/* Frank edited file - you are good to go...*/
+
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+tabbrowser tabpanels { background-color: rgb(226,25,20) !important; }
+browser { background-color: #272a34 !important; }
+
+#contentAreaContextMenu {
+	background-color:#23252e !important;
+	border-color:#06a284 !important;
+
+	/* Prevent popup from disappearing */
+	margin: 10px 0 0 10px !important;
+
+	padding: 0px 0 0 0 !important;
+	border-style: solid;
+}
+
+#context-navigation, #context-sep-navigation { 
+	display: none !important 
+}
+
+#context-pocket { 
+	display: none !important 
+}

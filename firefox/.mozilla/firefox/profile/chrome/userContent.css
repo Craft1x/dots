@@ -1,0 +1,41 @@
+/* /* Frank edited file - you are good to go...*/
+
+
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain(play.typeracer.com) {
+	div { 
+		font-family:'FiraCode Nerd Font Mono Retina', cursive !important;
+	}
+	input { 
+		font-family:'FiraCode Nerd Font Mono Retina', cursive !important;
+	}
+
+}
+
+@-moz-document url("about:newtab") {
+	body{background-color:#272a34!important;}
+	.search-handoff-button {background-color:#2d3039!important;}
+}
+
+@-moz-document regexp("(.*?)"){
+	.internalVimiumHintMarker {
+		/* linkhint boxes */
+		background: #06a284 !important;
+		border: 0px solid  !important;
+	}
+
+	.vimiumHintMarker span {
+		/* linkhint text */
+		color: white !important;
+		font-weight: bold !important;
+		font-size: 12px !important;
+		text-shadow: 0px 0px 0px transparent !important;
+		font-family: SFNS Display !important;
+	}
+
+	.vimiumHintMarker > .matchingCharacter {
+		color: #23252e !important;
+		opacity:0.5 !important;
+
+	}
+}
