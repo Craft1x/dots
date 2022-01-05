@@ -73,7 +73,7 @@ exec --no-startup-id optimus-manager-qt
 exec --no-startup-id kdeconnect-indicator
 
 # conky clock widget
-exec_always --no-startup-id pkill conky ; conky -c ~/.conky/Gotham/Gotham &
+exec_always --no-startup-id ~/.conky/conky-startup.sh
 
 #add glava
 #exec_always --no-startup-id pkill glava ; sleep 4 && glava --desktop 

@@ -38,4 +38,8 @@
 		opacity:0.5 !important;
 
 	}
+
+	::-moz-selection {
+    background-color: #208cc12e; !important;
+	}
 }
