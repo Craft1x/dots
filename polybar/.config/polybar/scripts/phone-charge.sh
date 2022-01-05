@@ -2,7 +2,7 @@
 DATA=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/8f54298fa462dd30/battery org.kde.kdeconnect.device.battery.charge` || ( echo ""; return 0; )
 
 ICON=""
-COLOR="#4dd0e1"
+COLOR="#60BAEC"
 SEPCOLOR="#3F5360"
 
 if [ $DATA -ge 95 ]; then
