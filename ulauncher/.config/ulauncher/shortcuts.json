@@ -4,7 +4,7 @@
         "name": "Startpage",
         "keyword": "sp",
         "cmd": "firefox-developer-edition \"https://www.startpage.com/do/search?query=`echo \"$*\" | jq -sRr '@uri'`\"",
-        "icon": "~/.icons/rpixae7jcvee2gsddtlg.webp",
+        "icon": "~/.config/ulauncher/icons/startpage.png",
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1629473541.2947898
@@ -14,7 +14,7 @@
         "name": "Wiktionary",
         "keyword": "wk",
         "cmd": "firefox-developer-edition \"https://en.wiktionary.org/w/index.php?search=`echo \"$*\" | jq -sRr '@uri'`\"",
-        "icon": "~/.icons/Wiktionary.png",
+        "icon": "~/.config/ulauncher/icons/wiktionary.png",
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1636135673.69954
@@ -24,7 +24,7 @@
         "name": "Wikipedia",
         "keyword": "wp",
         "cmd": "firefox-developer-edition \"https://en.wikipedia.org/w/index.php?search=`echo \"$*\" | jq -sRr '@uri'`\"",
-        "icon": "~/.icons/Wikipedia-logo.png",
+        "icon": "~/.config/ulauncher/icons/wikipedia.png",
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1636136673.034889
