@@ -1,5 +1,5 @@
 use_xft yes
-xftfont Cantarell:size=120:weight=50
+xftfont Cantarell:size=130:weight=50
 xftalpha 0.1
 update_interval 1
 total_run_times 0
@@ -9,7 +9,7 @@ own_window_class Conky
 own_window_type override
 own_window_transparent no
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_colour black
+own_window_colour 000205 
 own_window_argb_visual no
 own_window_argb_value 0
 
