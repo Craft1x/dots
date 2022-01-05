@@ -22,7 +22,7 @@ gaps inner 20
 gaps outer 0
 
 # colors
-set $bg-color 	         #06a284
+set $bg-color 	         #75A1FF
 set $inactive-bg-color   #272a34
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -307,3 +307,5 @@ for_window [class=".exe$"] move container to workspace $ws10, focus
 for_window [class="Lutris"] move container to workspace $ws10, focus
 
 for_window [class="flameshot"] floating enable
+
+# vim: filetype=i3config

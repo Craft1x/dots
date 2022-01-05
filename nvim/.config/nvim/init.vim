@@ -29,9 +29,7 @@ Plug 'phpactor/ncm2-phpactor'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-
-
+Plug 'mboughaba/i3config.vim'
 
 " Theme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
