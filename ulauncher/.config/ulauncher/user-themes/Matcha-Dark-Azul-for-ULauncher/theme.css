@@ -3,7 +3,7 @@
  */
  @define-color bg_color #272a34;
  @define-color window_bg @bg_color;
- @define-color window_border_color #06a284;
+ @define-color window_border_color #62DE84;
  @define-color prefs_backgroud #999;
  
  /**

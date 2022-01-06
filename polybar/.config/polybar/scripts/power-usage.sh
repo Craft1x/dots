@@ -12,7 +12,7 @@ if [ $P100 -ge 3200 ] || [ $P30 -ge 3300 ]; then
 elif [ $P100 -ge 200 ] && [ $P30 -ge $P100 ]; then
 	COLOR="#61C766"
 elif [ $P100 -ge 200 ]; then
-	COLOR="#E57C46"
+	COLOR="#FFCB6B"
 fi
 
 
