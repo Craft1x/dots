@@ -78,36 +78,20 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	fzf
+)
 #plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export EDITOR='nvim'
+
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #aliases
 alias ls='ls --color=auto'
@@ -137,20 +121,12 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;36m'
 
 #Autosuggestions
-source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^N'      autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=245'
-
-#Syntax higlighting
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Use LSD
 command -v lsd &> /dev/null && alias ls='lsd -l --icon never --group-dirs first'
 
-function reload_gtk_theme() {
-  theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
-  gsettings set org.gnome.desktop.interface gtk-theme ''
-  sleep 1
-  gsettings set org.gnome.desktop.interface gtk-theme $theme
-}
-
-bindkey '^N'      autosuggest-accept
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
