@@ -249,7 +249,7 @@ bindsym $mod+Shift+Ctrl+Right move workspace to output right
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # personal bindings
 include ~/.other/i3/bindings.conf
@@ -257,6 +257,7 @@ bindsym $sup+f exec --no-startup-id firefox-developer-edition
 bindsym $sup+t exec --no-startup-id kotatogram-desktop
 bindsym $sup+v exec --no-startup-id firefox-developer-edition "ext+container:name=Social&url=https://vk.com"
 bindsym $sup+y exec --no-startup-id firefox-developer-edition "ext+container:name=Personal&url=https://youtube.com"
+bindsym $sup+Shift+g exec --no-startup-id firefox-developer-edition "ext+container:name=Personal&url=https://mail.google.com"
 bindsym $sup+d exec --no-startup-id nemo ~/Downloads
 bindsym $sup+e exec --no-startup-id nemo
 bindsym $sup+q exec --no-startup-id echo nothing
