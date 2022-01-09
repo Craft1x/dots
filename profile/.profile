@@ -8,4 +8,4 @@ export EDITOR=/usr/bin/vim
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export TERMINAL=/usr/bin/kitty
 
-PATH=$PATH:/home/craftix/.cargo/bin
+PATH=$PATH:~/.cargo/bin
