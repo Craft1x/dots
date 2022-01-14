@@ -265,6 +265,8 @@ bindsym $sup+d exec --no-startup-id nemo ~/Downloads
 bindsym $sup+e exec --no-startup-id nemo
 bindsym $sup+q exec --no-startup-id echo nothing
 
+bindsym $mod+p sticky toggle
+
 # name='Screenshot area'
 bindsym shift+Print exec --no-startup-id flameshot gui
 # name='Screenshot'

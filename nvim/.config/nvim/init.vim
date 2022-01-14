@@ -31,6 +31,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mboughaba/i3config.vim'
 
+
 " Theme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " FZF file searcher
@@ -146,5 +147,6 @@ set colorcolumn=99999
 
 " Replace all alias
 nnoremap S :%s//g<Left><Left>
+noremap <C-P> @:<CR>
 
 autocmd filetype nroff nnoremap Q :w <bar> silent exec '!groff -ms '.shellescape('%').' -T pdf > '.shellescape('%:r').'.pdf'<CR>

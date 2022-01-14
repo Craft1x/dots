@@ -40,7 +40,8 @@ atmophere_icons_list = {
 def main():
     try:
         # Get data from weather.com
-        data = json.loads(weathercom.getCityWeatherDetails("polotsk"))
+        weather = weathercom.getCityWeatherDetails("polotsk")
+        data = json.loads(weather)
   
         # Get info from array
         id = data['vt1observation']['icon']
@@ -49,9 +50,8 @@ def main():
         wind_speed = data['vt1observation']['windSpeed']
 
 
-        return '%{F${colors.foreground}' + ' {}°C'.format(temperature) + '%{F-}'
+        return '%{F#3F5360}|%{F-} %{F${colors.foreground}' + ' {}°C'.format(temperature) + '%{F-}'
     except Exception as err:
-        #print(err)
         return "" # Return reload icon
 
 if __name__ == "__main__":
