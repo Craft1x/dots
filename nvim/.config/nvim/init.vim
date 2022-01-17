@@ -31,6 +31,10 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mboughaba/i3config.vim'
 
+" requires
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+
 
 " Theme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -56,6 +60,7 @@ call plug#end()
 lua << EOF
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.bashls.setup{}
+require'nvim-tree'.setup()
 EOF
 
 "Plug 'Yggdroot/indentLine'
@@ -105,6 +110,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+nnoremap <leader>g :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " Yank file to clip
 nnoremap <Leader>C gg"+yG

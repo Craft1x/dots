@@ -5,6 +5,8 @@
  */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
+@namespace html url("http://www.w3.org/1999/xhtml");
+
 tabbrowser tabpanels { background-color: rgb(226,25,20) !important; }
 browser { background-color: #272a34 !important; }
 
@@ -25,4 +27,15 @@ browser { background-color: #272a34 !important; }
 
 #context-pocket { 
 	display: none !important 
+}
+
+.menupopup-arrowscrollbox {
+	border: 0px !important;
+	box-shadow: 0 0 0px hsla(0,0%,0%,0%) !important;
+}
+
+#appMenu-popup {
+border-color: #06a284 !important;
+border-style: solid;
+padding: 0px 0 0 0 !important;
 }
