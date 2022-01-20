@@ -16,7 +16,7 @@ do
 
 	inType=`file --mime-type "$var" | rev | cut -d " " -f1 | rev`
 
-	#if in type contains a space
+	#if inType contains a space
 	if [[ "$oldFormat" == *" "* ]]; then
 		newName="$var"
 	else
@@ -26,7 +26,7 @@ do
 	notify-send "$var"
 
 	if [ `echo "$inType" | grep "video"` ]; then
-		ffmpeg -i "$var" -codec copy "$newName.$newFormat" && trash "$var"
+		ffmpeg -i "$var" "$newName.$newFormat" && trash "$var"
 	else
 		convert "$var" "$newName.$newFormat" && trash "$var"
 	fi
