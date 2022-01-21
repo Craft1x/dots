@@ -17,6 +17,8 @@ font pango:System San Francisco Display 11
 default_border pixel 3
 default_floating_border pixel 3 
 
+title_align center
+
 # gaps
 gaps inner 20
 gaps outer 0
@@ -282,6 +284,9 @@ bindsym Print exec --no-startup-id flameshot full -p ~/Pictures
 #   \ V  V /  | || |\  | |_| | |_| |\ V  V /  ___) |
 #    \_/\_/  |___|_| \_|____/ \___/  \_/\_/  |____/ 
 #
+
+# print all window titles bold
+for_window [class=".*"] title_format "<b>%title</b>"
 
 for_window [class="Evince"] border pixel 3
 for_window [class="(?i)gnome"] border pixel 3
