@@ -2,7 +2,7 @@
 
 cmd="${0%/*}/get_mpris_status.sh $1"
 
-zscroll -l 50 \
+zscroll -l 80 \
     --scroll-padding "$(printf ' %.0s' {1..8})" \
     -d 0.5 \
     -M "$cmd icon" \

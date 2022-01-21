@@ -43,7 +43,7 @@
         "id": "8fdb178b-1531-4007-a109-dc16bc792493",
         "name": "Translate",
         "keyword": "tr",
-        "cmd": "firefox-developer-edition \"https://translate.yandex.ru/?lang=en-ru&text=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "cmd": "firefox-developer-edition \"https://www.deepl.com/translator#en/ru/`echo \"$*\" | jq -sRr '@uri'`\"",
         "icon": "/usr/share/icons/Papirus-Dark/128x128/apps/google-translate.svg",
         "is_default_search": true,
         "run_without_argument": false,
@@ -78,5 +78,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1641325405.8330805
+    },
+    "c98252a8-1c4c-434b-8c4b-0e037079b9cc": {
+        "id": "c98252a8-1c4c-434b-8c4b-0e037079b9cc",
+        "name": "Translate",
+        "keyword": "yt",
+        "cmd": "firefox-developer-edition \"https://translate.yandex.ru/?lang=en-ru&text=`echo \"$*\" | jq -sRr '@uri'`\"",
+        "icon": "~/.config/ulauncher/icons/yt.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1642756618.817425
     }
 }

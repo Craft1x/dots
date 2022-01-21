@@ -40,9 +40,9 @@ get_info() {
 
         if [ -n "$artist" ]; then
             album=$(extract_meta album)
-            [ -n "$album" ] && echo -n "  $album "
+            [ -n "$album" ] && echo -n "  $album /"
 
-            echo -n " ﴁ $artist  "
+            echo -n " ﴁ $artist / "
         fi
 
         echo "$title"
