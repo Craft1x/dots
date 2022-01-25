@@ -51,7 +51,7 @@ focus_follows_mouse no
 #	
 
 # set screen position
-exec --no-startup-id ~/.screenlayout/layout.sh 
+exec --no-startup-id test -f ~/.screenlayout/layout.sh && ~/.screenlayout/layout.sh 
 
 # add picom for shadows and animtaions
 exec --no-startup-id picom --experimental-backends --backend glx -b
@@ -75,10 +75,10 @@ exec --no-startup-id unclutter &
 # start applets
 exec --no-startup-id nm-applet 
 exec --no-startup-id command -v optimus-manager-qt && optimus-manager-qt
-exec --no-startup-id kdeconnect-indicator
+exec --no-startup-id command -v kdeconnect-indicator && kdeconnect-indicator
 
 # conky clock widget
-exec_always --no-startup-id ~/.conky/conky-startup.sh
+exec_always --no-startup-id command -v conky &&  ~/.conky/conky-startup.sh
 
 #add glava
 #exec_always --no-startup-id pkill glava ; sleep 4 && glava --desktop 
