@@ -1,4 +1,4 @@
-#  ___ _____    ____ ___  _   _ _____ ___ ____ 
+#  ___ ____    ____ ___  _   _ _____ ___ ____ 
 #	|_ _|___ /   / ___/ _ \| \ | |  ___|_ _/ ___|
 #	 | |  |_ \  | |  | | | |  \| | |_   | | |  _ 
 #	 | | ___) | | |__| |_| | |\  |  _|  | | |_| |
@@ -6,9 +6,9 @@
 #
 
 # alt
-set $mod Mod1 
+set $mod Mod4
 # super
-set $sup Mod4 
+set $sup Mod1
 
 # font for window titles
 font pango:System San Francisco Display 11
@@ -49,6 +49,9 @@ focus_follows_mouse no
 #	 ___) || |/ ___ \|  _ < | | | |_| |  __/ 
 #	|____/ |_/_/   \_\_| \_\|_|  \___/|_|
 #	
+
+# swap alt and win 
+exec_always --no-startup-id setxkbmap -option altwin:swap_alt_win
 
 # set screen position
 exec --no-startup-id test -f ~/.screenlayout/layout.sh && ~/.screenlayout/layout.sh 
@@ -109,7 +112,7 @@ exec --no-startup-id xset r rate 300 50
 #
 
 bindsym $mod+Tab exec --no-startup-id ~/.config/i3/i3-cycle-windows 
-bindsym Mod1+Shift+Tab workspace next
+bindsym $mod+Shift+Tab workspace next
 
 # Use pactl to adjust volume in PulseAudio.
 set $show_volume_notification ~/.config/i3/notify_volume.sh
@@ -127,7 +130,6 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $sup+Return exec i3-sensible-terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
 #open uni schedule
