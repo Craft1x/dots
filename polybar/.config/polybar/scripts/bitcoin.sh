@@ -9,4 +9,4 @@ PRICE=`curl -s http://api.coindesk.com/v1/bpi/currentprice.json | jq -r '.bpi.US
 
 icon_color="${yellow}"
 
-echo $separator%{A1:xdg-open "https\://finance.yahoo.com/quote/BTC-USD":} "%{F$icon_color}""₿""%{F-}" $PRICE %{A-}
+echo $separator%{A1:xdg-open "https\://www.coindesk.com/price/bitcoin":} "%{F$icon_color}""₿""%{F-}" $PRICE %{A-}
