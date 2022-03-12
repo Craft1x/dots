@@ -82,7 +82,7 @@ for player in "${PLAYERS[@]}"; do
 
     # if we have one playing, we'll use it and EXIT
     if [ "$p_status" = "Playing"  ]; then
-        send_hook 1
+        # send_hook 1
         get_info "$player" "$2"
         exit 0;
     fi
@@ -92,7 +92,7 @@ done
 
 # if we have a paused, show it otherwise assume there are no players or have all stopped
 if [ -n "${PAUSED[0]}" ]; then
-    send_hook 2
+    # send_hook 2
     get_info "${PAUSED[0]}" "$2"
 else
     [ "$2" = icon ] && echo "none" || echo " Offline"
