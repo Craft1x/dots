@@ -102,12 +102,19 @@ local function select_visualizer(atrack, vtrack, albumart)
     mp.set_property("options/glsl-shaders", "")
     return get_visualizer(opts.name, opts.quality, vtrack, albumart)
   end
-    return "[vid1]thumbnail[vo];[aid1]amix=inputs=1[ao]"
+  return ""
 end
 
 local function visualizer_hook()
     local visualizer = select_visualizer(atrack, vtrack, albumart)
     mp.set_property("options/lavfi-complex", visualizer)
+
+    if visualizer == "" then
+       mp.commandv("set", "aid", "1")
+       mp.commandv("set", "vid", "1")
+       mp.commandv("set", "aid", "auto")
+       mp.commandv("set", "vid", "auto")
+    end
 end
 
 mp.add_hook("on_preloaded", 50, visualizer_hook)
