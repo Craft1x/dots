@@ -97,8 +97,11 @@ local function get_visualizer(name, quality, vtrack, albumart)
             "format             = rgb0 [vo]"
 end
 
+was_enabled = false
+
 local function select_visualizer(atrack, vtrack, albumart)
   if opts.enabled then
+    was_enabled = true;
     mp.set_property("options/glsl-shaders", "")
     return get_visualizer(opts.name, opts.quality, vtrack, albumart)
   end
@@ -107,6 +110,11 @@ end
 
 local function visualizer_hook()
     local visualizer = select_visualizer(atrack, vtrack, albumart)
+
+    if not was_enabled then
+      return
+    end
+
     mp.set_property("options/lavfi-complex", visualizer)
 
     if visualizer == "" then
