@@ -61,7 +61,8 @@ exec --no-startup-id picom -b
 
 # set wallpaper
 exec_always --no-startup-id hsetroot -solid #000000
-exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id ~/.config/nitrogen/set-random-wallpaper.sh
+#exec_always --no-startup-id nitrogen --restore
 
 # start polkit
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -266,6 +267,9 @@ bindsym $mod+"i" exec --no-startup-id i3-msg "gaps inner current plus 10"
 bindsym $mod+Shift+"i" exec --no-startup-id i3-msg "gaps inner current minus 10" 
 bindsym $mod+"o" exec --no-startup-id i3-msg "gaps outer current plus 10" 
 bindsym $mod+Shift+"o" exec --no-startup-id i3-msg "gaps outer current minus 10" 
+
+# change wallpaper
+bindsym $mod+Shift+"w" exec --no-startup-id ~/.config/nitrogen/set-random-wallpaper.sh
 
 # personal bindings
 include ~/.other/i3/bindings.conf
