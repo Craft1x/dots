@@ -10,6 +10,13 @@ CACHE_DIR=$HOME/.cache/nitrogen
 
 mkdir -p "$CACHE_DIR"
 
+# delete bugged lockfile 
+find "${CACHE_DIR}"/lockfile -mmin +1 -delete
+
+[ -f "${CACHE_DIR}"/lockfile ] && exit 0
+
+touch "${CACHE_DIR}"/lockfile
+
 [ -f "${CACHE_DIR}"/current_bg_image.jpg ] && rm "${CACHE_DIR}"/current_bg_image.jpg 
 [ -f "${CACHE_DIR}"/next_bg_image.jpg ] && mv "${CACHE_DIR}"/next_bg_image.jpg "${CACHE_DIR}"/current_bg_image.jpg
 
@@ -36,3 +43,5 @@ do
   convert "${CACHE_DIR}"/next_bg_image.jpg -quality 100 -resize $RES! "${CACHE_DIR}"/$COUNT.jpg
   let COUNT++
 done;
+
+rm "${CACHE_DIR}"/lockfile 
