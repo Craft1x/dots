@@ -110,6 +110,7 @@ alias watch2='/home/craftix/.other/watch2.sh'
 alias i3edit='vim ~/.config/i3/config'
 alias viedit='nvim ~/.config/nvim/init.vim'
 alias vim='nvim'
+alias v='vim'
 alias neofetch='neofetch --backend kitty --source ~/.config/neofetch/arch.png'
 
 #Style the man pages
