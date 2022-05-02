@@ -79,6 +79,16 @@
         "run_without_argument": true,
         "added": 1641325405.8330805
     },
+    "9be11602-0307-4cbc-9f89-fc7433d9da36": {
+        "id": "9be11602-0307-4cbc-9f89-fc7433d9da36",
+        "name": "Logout",
+        "keyword": "Logout",
+        "cmd": "i3-msg exit",
+        "icon": "~/.config/ulauncher/icons/logout.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1641325405.8330805
+    },
     "c98252a8-1c4c-434b-8c4b-0e037079b9cc": {
         "id": "c98252a8-1c4c-434b-8c4b-0e037079b9cc",
         "name": "Translate",

@@ -121,6 +121,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && $show_volume_n
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && $show_volume_notification 
 bindsym XF86AudioMute exec --no-startup-id pamixer -t && $show_volume_notification 
 
+bindsym $sup+9 exec --no-startup-id pamixer -d 5 && $show_volume_notification 
+bindsym $sup+0 exec --no-startup-id pamixer -i 5 && $show_volume_notification 
+bindsym $sup+Shift+9 exec --no-startup-id pamixer -t && $show_volume_notification 
+bindsym $sup+Shift+0 exec --no-startup-id pamixer -t && $show_volume_notification 
+
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
@@ -274,12 +279,13 @@ bindsym $mod+Shift+"w" exec --no-startup-id ~/.config/nitrogen/set-random-wallpa
 # personal bindings
 include ~/.other/i3/bindings.conf
 bindsym $sup+f exec --no-startup-id firefox-developer-edition
-bindsym $sup+t exec --no-startup-id kotatogram-desktop
+bindsym $sup+m exec --no-startup-id kotatogram-desktop
 bindsym $sup+v exec --no-startup-id firefox-developer-edition "ext+container:name=Social&url=https://vk.com"
 bindsym $sup+y exec --no-startup-id firefox-developer-edition "ext+container:name=Personal&url=https://youtube.com"
 bindsym $sup+Shift+g exec --no-startup-id firefox-developer-edition "ext+container:name=Personal&url=https://mail.google.com"
 bindsym $sup+d exec --no-startup-id nemo ~/Downloads
 bindsym $sup+e exec --no-startup-id nemo
+bindsym $sup+t exec --no-startup-id nemo `mktemp -d`
 bindsym $sup+q exec --no-startup-id echo nothing
 
 bindsym $mod+p sticky toggle
