@@ -1,10 +1,12 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+source "$HOME/.config/polybar/scripts/source-colors.sh" 
+
 DATA=`curl -s http://192.168.1.47:1337/getData` || (echo ""; exit 0)
 P30=`echo $DATA | cut -d " " -f3`
 P100=`echo $DATA | cut -d " " -f6`
 
 ICON=""
-COLOR="#61C766"
+COLOR="${yellow}"
 
 if [ $P100 -ge 3200 ] || [ $P30 -ge 3300 ]; then
 	ICON=""
@@ -16,4 +18,4 @@ elif [ $P100 -ge 200 ]; then
 fi
 
 
-echo "%{F$COLOR}$ICON%{F-} ${P30}W"
+echo "%{F$COLOR}$ICON%{F-} ${P30}"

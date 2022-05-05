@@ -147,8 +147,7 @@ bindsym $sup+Shift+c kill
 bindsym $sup+Shift+x exec --no-startup-id bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'
 
 # lock screen
-bindsym $sup+l exec --no-startup-id cinnamon-screensaver-command --lock
-
+# bindsym $sup+l exec --no-startup-id cinnamon-screensaver-command --lock
 
 # change focus
 bindsym $mod+h focus left
