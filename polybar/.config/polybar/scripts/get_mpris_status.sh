@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$HOME/.config/polybar/scripts/source-colors.sh" 
+
 # The name of polybar bar which houses the main spotify module and the control modules.
 PARENT_BAR="${1:-music}"
 PARENT_BAR_PID=$(pgrep -a "polybar" | grep "$PARENT_BAR" | cut -d" " -f1)
@@ -45,7 +47,7 @@ get_info() {
             echo -n " ﴁ $artist / "
         fi
 
-        echo "$title"
+        echo `echo $title | cut -c -80` $separator 
         return 0
     fi
 
@@ -95,5 +97,5 @@ if [ -n "${PAUSED[0]}" ]; then
     # send_hook 2
     get_info "${PAUSED[0]}" "$2"
 else
-    [ "$2" = icon ] && echo "none" || echo " Offline"
+    [ "$2" = icon ] && echo "none" || echo "" #" Offline"
 fi

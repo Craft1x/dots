@@ -18,4 +18,4 @@ UP=`echo $TOTAL | cut -d ' ' -f2`
 icon_color1="${cyan}"
 icon_color2="${red}"
 
-echo $separator "%{F$icon_color1}""""%{F-}" $DOWN "%{F$icon_color2}""""%{F-}" $UP
+echo $separator "%{F$icon_color1}""""%{F-}" $DOWN "%{F$icon_color2}""""%{F-}" $UP
