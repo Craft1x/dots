@@ -3,6 +3,7 @@
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
 cmd="${0%/*}/get_mpris_status.sh $1" 
+cmd_match="${0%/*}/get_mpris_match.sh $1" 
 
 # zscroll -l 900 \
 #     --scroll-padding "$(printf ' %.0s' {1..8})" \
@@ -24,9 +25,10 @@ icon_color="${green}"
 icon_color_pause="${cyan}"
 
 zscroll -l 50 --before-text "♪ " --after-text " $separator" --delay 0.2  \
-  --match-command "playerctl -p \"\" status" \
+  --match-command "$cmd_match" \
   --match-text "Playing" "--before-text '%{F$icon_color}%{F-} '" \
   --match-text "Paused" "--before-text '%{F$icon_color_pause}契%{F-} '" \
+  --match-text "Nothing" "--before-text '' --after-text ''" \
   --update-check true "$cmd" &
 
 wait
