@@ -50,7 +50,7 @@ def main():
         wind_speed = data['vt1observation']['windSpeed']
 
 
-        return '%{F#3F5360}|%{F-} ' + ' {}'.format(temperature) + '%{F-}'
+        return '%{F#3F5360}|%{F-} %{F#e2e2e2}%{F-}' + ' {}'.format(temperature) + '%{F-}'
     except Exception as err:
         return "" # Return reload icon
 

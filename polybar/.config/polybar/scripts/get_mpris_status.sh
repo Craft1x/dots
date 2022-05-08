@@ -47,7 +47,7 @@ get_info() {
             echo -n " ﴁ $artist / "
         fi
 
-        echo `echo $title | cut -c -80` $separator 
+        echo $title 
         return 0
     fi
 

@@ -51,4 +51,4 @@ fi
 fi
 
 
-echo "%{F$SEPCOLOR}|%{F-} %{F$COLOR}$ICON%{F-} ${DATA}"
+echo "$separator %{F$COLOR}$ICON%{F-} ${DATA}"
