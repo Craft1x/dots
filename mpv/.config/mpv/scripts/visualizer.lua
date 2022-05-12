@@ -71,7 +71,7 @@ local function get_visualizer(name, quality, vtrack, albumart)
         return ""
     end
 
-    h = w * opts.height / 16
+    h = w 
 
     return "[aid1] asplit [ao]," ..
             "afifo," ..

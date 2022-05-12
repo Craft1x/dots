@@ -102,7 +102,7 @@ exec_always --no-startup-id ~/.config/i3/alternating_layouts.py
 
 
 #increase key speed via rate change
-exec --no-startup-id xset r rate 300 50
+exec_always --no-startup-id xset r rate 300 50
 
 
 #	 _  _________   ______ ___ _   _ ____  ____  
