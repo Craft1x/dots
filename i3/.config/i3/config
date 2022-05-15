@@ -98,7 +98,7 @@ exec_always --no-startup-id numlockx
 #bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id ulauncher --hide-window
+exec --no-startup-id ulauncher --no-window
 exec --no-startup-id emote
 
 #exec_always --no-startup-id autotiling

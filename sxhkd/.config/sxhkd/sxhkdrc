@@ -85,3 +85,6 @@ super + {_,shift+}p
 
 super + shift + t 
   ps -e | grep picom && pkill picom || picom --experimental-backends --backend glx -b
+
+super + d
+  ulauncher-toggle
