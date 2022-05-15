@@ -10,7 +10,7 @@ CACHE_DIR=$HOME/.cache/nitrogen
 
 mkdir -p "$CACHE_DIR"
 
-# delete bugged lockfile 
+# delete bugged lockfile that is older than 1 minute
 find "${CACHE_DIR}"/lockfile -mmin +1 -delete
 
 [ -f "${CACHE_DIR}"/lockfile ] && exit 0

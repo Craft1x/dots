@@ -1,0 +1,87 @@
+super + shift + Escape
+  notify-send "123"
+
+# window moving and switching
+super + {_,shift+}{h,j,k,l,Left,Down,Up,Right}
+  i3-msg {focus,move} {left,down,up,right,left,down,up,right}
+
+super + f
+  i3-msg fullscreen toggle
+
+super + {b,v}
+  i3-msg split {h,v}
+
+super + s; {t,s}
+  i3-msg layout {tabbed,toggle split}
+
+super + shift + space
+  i3-msg floating toggle
+
+super + {space, a}
+  i3-msg focus {mode_toggle, parent}
+
+super + {0-9}
+  i3-msg workspace {0-9}
+
+super + shift {0-9}
+  echo {0-9} | xargs -I _ i3-msg move container to workspace _, workspace _, focus
+
+super + ctrl + {h,l,Left,Right}
+  i3-msg resize {shrink,grow,shrink,grow} width 10 px or 10 ppt
+
+super + ctrl + {j,k,Down,Up}
+  i3-msg resize {shrink,grow,shrink,grow} height 10 px or 10 ppt
+
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+light {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
+
+super + Tab
+  ~/.config/i3/i3-cycle-windows 
+
+super + shift + Tab
+  i3-msg workspace next
+
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute,equal,minus,BackSpace}
+  pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
+
+super + {equal,minus,BackSpace}
+  pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
+
+{XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
+playerctl {play,pause,next,previous}
+
+alt + shift + {c,x}
+  {i3-msg kill, bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'}
+
+super + shift + ctrl + {l,h,Left,Right}
+  i3-msg move workspace to output {left,right,left,right}
+
+super + shift + r
+  i3-msg restart
+
+super + shift + w
+  ~/.config/nitrogen/set-random-wallpaper.sh
+
+super + Return
+  kitty
+
+super + {i,o}+{_,shift}
+  i3-msg gaps {inner,outer} current {plus,minus} 20
+
+alt + m
+  kotatogram-desktop
+
+alt + f
+  firefox-developer-edition
+
+alt + {d,e,t}
+  nemo {~/Downloads,.,`mktemp -d`}
+
+super + {_,shift+}p
+  i3-msg sticky {enable,disable}
+
+{shift+,_} Print
+  flameshot {gui,full -p ~/Pictures}
+
+super + shift + t 
+  ps -e | grep picom && pkill picom || picom --experimental-backends --backend glx -b
