@@ -71,11 +71,11 @@ function download() {
 	notify "$(basename "$0")" "We're all set!"
 }
 
-theme="style-emoji"
+theme="style-noicon"
 dir="$HOME/.config/rofi"
 
 function rofi_menu() { # {{{
-	rofi -no-lazy-grab -lines 20 -matching fuzzy -sort -i -theme $dir/"$theme" -dmenu -p 'emoji: ' \
+	rofi -no-lazy-grab -lines 20 -matching fuzzy -sort -i -theme $dir/"$theme" -dmenu -p '' \
 		-kb-custom-1 Ctrl+c
 }
 # }}}

@@ -86,8 +86,11 @@ super + {_,shift+}p
 super + shift + t 
   ps -e | grep picom && pkill picom || picom --experimental-backends --backend glx -b
 
-super + {d,e}
-  ~/.config/rofi/{launcher.sh,rofi-emoji.sh}
+super + {d,e,c}
+  ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh}
 
 super + ctrl + v; {1,2,3,4,5}
   xdotool type "`clipster -c -o -N {0,1,2,3,4}`"
+
+alt + {p,j,k}
+  xdotool key --window "$(xdotool search --class mpv)" {p,J,K}
