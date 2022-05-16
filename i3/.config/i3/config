@@ -80,6 +80,7 @@ exec_always --no-startup-id ~/.config/sxhkd/launch.sh
 
 # Start clipster daemon
 exec --no-startup-id clipster -d
+exec clipster -c --erase-entire-board
 
 # Hide the mouse after no movement
 exec --no-startup-id unclutter &
@@ -87,7 +88,7 @@ exec --no-startup-id unclutter &
 # start applets
 exec --no-startup-id nm-applet 
 exec --no-startup-id command -v optimus-manager-qt && optimus-manager-qt
-exec --no-startup-id command -v kdeconnect-indicator && kdeconnect-indicator
+# exec --no-startup-id command -v kdeconnect-indicator && kdeconnect-indicator
 
 # conky clock widget
 exec_always --no-startup-id command -v conky &&  ~/.conky/conky-startup.sh
@@ -98,8 +99,8 @@ exec_always --no-startup-id numlockx
 #bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id ulauncher --no-window
-exec --no-startup-id emote
+# exec --no-startup-id ulauncher --no-window
+# exec --no-startup-id emote
 
 #exec_always --no-startup-id autotiling
 exec_always --no-startup-id ~/.config/i3/alternating_layouts.py

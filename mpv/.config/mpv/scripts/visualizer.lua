@@ -29,15 +29,6 @@ if not (mp.get_property("options/lavfi-complex", "") == "") then
     return
 end
 
-local visualizer_name_list = {
-    -- "off",
-    -- "showcqt",
-    "avectorscope",
-    -- "showspectrum",
-    -- "showcqtbar",
-    -- "showwaves",
-}
-
 local options = require 'mp.options'
 local msg     = require 'mp.msg'
 
@@ -64,14 +55,14 @@ local function get_visualizer(name, quality, vtrack, albumart)
         w = 2560
         fps = 60
     elseif quality == "custom" then
-        w = 2560 
+        w = 2560
         fps = 60
     else
         msg.log("error", "invalid quality")
         return ""
     end
 
-    h = w 
+    h = w
 
     return "[aid1] asplit [ao]," ..
             "afifo," ..

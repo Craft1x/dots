@@ -87,4 +87,7 @@ super + shift + t
   ps -e | grep picom && pkill picom || picom --experimental-backends --backend glx -b
 
 super + d
-  ulauncher-toggle
+  ~/.config/rofi/launcher.sh
+
+super + ctrl + v; {1,2,3,4,5}
+  xdotool type "`clipster -c -o -N {0,1,2,3,4}`"
