@@ -1,4 +1,4 @@
 theme="style"
 dir="$HOME/.config/rofi"
 
-rofi -no-lazy-grab -matching fuzzy -sort -show drun -modi drun -theme $dir/"$theme"
+rofi -no-lazy-grab -sort -sorting-method fzf -show drun -modi drun -theme $dir/"$theme"
