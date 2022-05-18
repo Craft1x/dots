@@ -80,7 +80,7 @@ exec_always --no-startup-id ~/.config/sxhkd/launch.sh
 
 # Start clipster daemon
 exec --no-startup-id clipster -d
-exec clipster -c --erase-entire-board
+exec --no-startup-id clipster -c --erase-entire-board
 
 # Hide the mouse after no movement
 exec --no-startup-id unclutter &
@@ -98,9 +98,6 @@ exec_always --no-startup-id numlockx
 
 #bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# exec --no-startup-id ulauncher --no-window
-# exec --no-startup-id emote
 
 #exec_always --no-startup-id autotiling
 exec_always --no-startup-id ~/.config/i3/alternating_layouts.py

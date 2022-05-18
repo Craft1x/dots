@@ -50,6 +50,9 @@ super + {equal,minus,BackSpace}
 {XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
 playerctl {play,pause,next,previous}
 
+super + {p,bracketleft,bracketright}
+  playerctl {play-pause,previous,next}
+
 alt + shift + {c,x}
   {i3-msg kill, bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'}
 
@@ -77,7 +80,7 @@ alt + f
 alt + {d,e,t}
   nemo {~/Downloads,.,`mktemp -d`}
 
-super + {_,shift+}p
+super + {_,shift+}m
   i3-msg sticky {enable,disable}
 
 {shift+,_} Print
