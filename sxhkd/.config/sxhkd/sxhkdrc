@@ -17,8 +17,8 @@ super + s; {t,s}
 super + shift + space
   i3-msg floating toggle
 
-super + {space, a}
-  i3-msg focus {mode_toggle, parent}
+super + {space}
+  i3-msg focus {mode_toggle}
 
 super + {0-9}
   i3-msg workspace {0-9}

@@ -96,6 +96,8 @@ exec_always --no-startup-id command -v conky &&  ~/.conky/conky-startup.sh
 #enable num lock 
 exec_always --no-startup-id numlockx
 
+#hide sidebar in nemo
+exec_always gsettings set org.nemo.window-state start-with-sidebar false
 #bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -114,7 +116,7 @@ exec_always --no-startup-id xset r rate 300 50
 #
 
 # print all window titles bold
-for_window [class=".*"] title_format "<b>%title</b>"
+for_window [class=".*"] title_formae "<b>%title</b>"
 
 for_window [class="Evince"] border pixel 3
 for_window [class="(?i)gnome"] border pixel 3
@@ -149,5 +151,6 @@ for_window [class=".exe$"] move container to workspace 10, focus
 for_window [class="Lutris"] move container to workspace 10, focus
 
 for_window [class="flameshot"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
 
 # vim: filetype=i3config
