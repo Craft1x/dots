@@ -53,61 +53,9 @@ focus_follows_mouse no
 #	|____/ |_/_/   \_\_| \_\|_|  \___/|_|
 #	
 
+exec --no-startup-id ~/.config/autostart.sh
 
-# set screen position
-exec --no-startup-id test -f ~/.screenlayout/layout.sh && ~/.screenlayout/layout.sh 
-
-# add picom for shadows and animtaions
-#exec --no-startup-id picom --experimental-backends --backend glx -b
-exec --no-startup-id picom -b
-
-# set wallpaper
-exec_always --no-startup-id hsetroot -solid #000000
-exec_always --no-startup-id ~/.config/nitrogen/set-random-wallpaper.sh
-#exec_always --no-startup-id nitrogen --restore
-
-# start polkit
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-# notification daemon
-exec --no-startup-id dunst &
-
-# swap alt and win 
-exec_always --no-startup-id setxkbmap -option altwin:swap_alt_win
-
-# keybind daemon
-exec_always --no-startup-id ~/.config/sxhkd/launch.sh
-
-# Start clipster daemon
-exec --no-startup-id clipster -d
-exec --no-startup-id clipster -c --erase-entire-board
-
-# Hide the mouse after no movement
-exec --no-startup-id unclutter &
-
-# start applets
-exec --no-startup-id nm-applet 
-exec --no-startup-id command -v optimus-manager-qt && optimus-manager-qt
-# exec --no-startup-id command -v kdeconnect-indicator && kdeconnect-indicator
-
-# conky clock widget
-exec_always --no-startup-id command -v conky &&  ~/.conky/conky-startup.sh
-
-#enable num lock 
-exec_always --no-startup-id numlockx
-
-#hide sidebar in nemo
-exec_always gsettings set org.nemo.window-state start-with-sidebar false
-#bar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-#exec_always --no-startup-id autotiling
-exec_always --no-startup-id ~/.config/i3/alternating_layouts.py
-
-
-#increase key speed via rate change
-exec_always --no-startup-id xset r rate 300 50
-
+#
 # __        _____ _   _ ____   _____        ______  
 # \ \      / /_ _| \ | |  _ \ / _ \ \      / / ___| 
 #  \ \ /\ / / | ||  \| | | | | | | \ \ /\ / /\___ \ 
