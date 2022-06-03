@@ -33,7 +33,7 @@ super + ctrl + {j,k,Down,Up}
   i3-msg resize {shrink,grow,shrink,grow} height 10 px or 10 ppt
 
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-light {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
+  light {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
 
 super + Tab
   ~/.config/i3/i3-cycle-windows 
@@ -48,7 +48,7 @@ super + {equal,minus,BackSpace}
   pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
 
 {XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
-playerctl {play,pause,next,previous}
+  playerctl {play,pause,next,previous}
 
 super + {p,bracketleft,bracketright}
   playerctl {play-pause,previous,next}
