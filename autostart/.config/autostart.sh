@@ -50,5 +50,8 @@ xset r rate 300 50 &
 # keybind daemon
 ~/.config/sxhkd/launch.sh &
 
+# local autostarts
+[ -f ~/.other/autostart-local.sh ] && ~/.other/autostart-local.sh &
+
 # waiting for all to finish
 wait
