@@ -1,5 +1,13 @@
 #!/bin/bash
 
+function configureKeyboard {
+  #increase key speed via rate change
+  xset r rate 300 50 &
+
+  # swap alt and win 
+  setxkbmap -option altwin:swap_alt_win &
+}
+
 # set screen position
 test -f ~/.screenlayout/layout.sh && ~/.screenlayout/layout.sh &
 
@@ -13,10 +21,6 @@ picom -b &
 
 # notification daemon
 dunst &
-
-# swap alt and win 
-setxkbmap -option altwin:swap_alt_win &
-
 
 # Start clipster daemon
 clipster -d &
@@ -44,14 +48,13 @@ $HOME/.config/polybar/launch.sh &
 #exec_always --no-startup-id autotiling
 ~/.config/i3/alternating_layouts.py &
 
-#increase key speed via rate change
-xset r rate 300 50 &
-
 # keybind daemon
 ~/.config/sxhkd/launch.sh &
 
 # local autostarts
 [ -f ~/.other/autostart-local.sh ] && ~/.other/autostart-local.sh &
+
+configureKeyboard && sleep 2 && configureKeyboard &
 
 # waiting for all to finish
 wait
