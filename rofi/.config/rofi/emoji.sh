@@ -71,7 +71,7 @@ function download() {
 	notify "$(basename "$0")" "We're all set!"
 }
 
-theme="style-noicon"
+theme="style-emoji"
 dir="$HOME/.config/rofi"
 
 function rofi_menu() { # {{{
