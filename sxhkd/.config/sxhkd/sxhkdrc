@@ -63,7 +63,7 @@ super + shift + w
   ~/.config/nitrogen/set-random-wallpaper.sh
 
 super + Return
-  kitty
+  kitty ~
 
 super + {i,o}+{_,shift}
   i3-msg gaps {inner,outer} current {plus,minus} 20
@@ -75,7 +75,7 @@ alt + f
   firefox-developer-edition
 
 alt + {d,e,t}
-  nemo {~/Downloads,.,`mktemp -d`}
+  nemo {~/Downloads,~,`mktemp -d`}
 
 super + {_,shift+}m
   i3-msg sticky {enable,disable}
