@@ -1,60 +1,69 @@
 #!/bin/bash
 
-function configureKeyboard {
+DIR="/tmp/autostart-logs"
+
+rm -fr $DIR
+mkdir -p $DIR
+
+run ()
+{
+echo `date -u +"%H:%M:%S"` "RUN:" "$@" >> $DIR"/log"
+$@ >> $DIR"/log" 2>&1 &
+}
+
+configureKeyboard() {
   #increase key speed via rate change
-  xset r rate 300 50 &
+  xset r rate 300 50 
 
   # swap alt and win 
-  setxkbmap -option altwin:swap_alt_win &
+  setxkbmap -option altwin:swap_alt_win 
 }
 
 # set screen position
-test -f ~/.screenlayout/layout.sh && ~/.screenlayout/layout.sh &
+test -f ~/.screenlayout/layout.sh && run ~/.screenlayout/layout.sh 
 
-hsetroot -solid "#000000" && ~/.config/nitrogen/set-random-wallpaper.sh &
+run hsetroot -solid "#000000" && run ~/.config/nitrogen/set-random-wallpaper.sh 
 
 # add picom for shadows and animtaions
-picom -b & 
+run picom -b 
 
 # start polkit
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 
 # notification daemon
-dunst &
+run dunst 
 
 # Start clipster daemon
-clipster -d &
-clipster -c --erase-entire-board &
+run clipster -d 
+run clipster -c --erase-entire-board 
 
 # Hide the mouse after no movement
-unclutter &
+run unclutter 
 
 # start applets
-nm-applet  &
-command -v optimus-manager-qt && optimus-manager-qt &
+run nm-applet  
+command -v optimus-manager-qt && run optimus-manager-qt 
 # exec --no-startup-id command -v kdeconnect-indicator && kdeconnect-indicator
 
 # conky clock widget
-command -v conky &&  ~/.conky/conky-startup.sh &
+command -v conky && run ~/.conky/conky-startup.sh 
 
 #enable num lock 
-numlockx &
+run numlockx 
 
 #hide sidebar in nemo
-gsettings set org.nemo.window-state start-with-sidebar false &
+run gsettings set org.nemo.window-state start-with-sidebar false 
 #bar
-$HOME/.config/polybar/launch.sh &
+run $HOME/.config/polybar/launch.sh 
 
 #exec_always --no-startup-id autotiling
-~/.config/i3/alternating_layouts.py &
+run ~/.config/i3/alternating_layouts.py 
 
-# keybind daemon
-~/.config/sxhkd/launch.sh &
 
 # local autostarts
-[ -f ~/.other/autostart-local.sh ] && ~/.other/autostart-local.sh &
+[ -f ~/.other/autostart-local.sh ] && run ~/.other/autostart-local.sh 
 
-configureKeyboard && sleep 2 && configureKeyboard &
+sleep 1 && run configureKeyboard && run ~/.config/sxhkd/launch.sh 
 
 # waiting for all to finish
 wait
