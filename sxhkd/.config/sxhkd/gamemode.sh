@@ -8,13 +8,13 @@ enable() {
   notify-send -r 69360 -i "$HOME/.config/sxhkd/icons/games.svg" "Game mode : on"
   mv "$CONFIG/sxhkdrc" "$CONFIG/sxhkdrc-normal"
   cp "$CONFIG/sxhkdrc-game" "$CONFIG/sxhkdrc"
-  killall -SIGUSR1 sxhkd
+  bash ~/.config/sxhkd/launch.sh
 }
 
 disable() {
   notify-send -r 69360 -i "$HOME/.config/sxhkd/icons/games.svg" "Game mode : off"
   mv "$CONFIG/sxhkdrc-normal" "$CONFIG/sxhkdrc"
-  killall -SIGUSR1 sxhkd
+  bash ~/.config/sxhkd/launch.sh
 }
 
 toggle() {
