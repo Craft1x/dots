@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=File History
+Comment=Displays btrfs file history
+Exec=<scripts/file_history.sh %F>
+Icon-Name=history
+Extensions=any
+Selection=one
+EscapeSpaces=true
+Dependencies=/usr/bin/btrfs;
