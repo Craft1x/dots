@@ -1,16 +1,13 @@
 # gamemode
 
-super + {_,shift+}{h,j,k,l,Left,Down,Up,Right}
-  i3-msg {focus,move} {left,down,up,right,left,down,up,right}
+super + {h,j,k,l,Left,Down,Up,Right}
+  i3-msg focus {left,down,up,right,left,down,up,right}
 
 super + f
   i3-msg fullscreen toggle
 
 super + {0-9}
   i3-msg workspace {0-9}
-
-super + shift {0-9}
-  echo {0-9} | xargs -I _ i3-msg move container to workspace _, workspace _, focus
 
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
   light {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
@@ -30,9 +27,6 @@ super + {p,bracketleft,bracketright}
 alt + shift + {c,x}
   {i3-msg kill, bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'}
 
-super + shift + ctrl + {l,h,Left,Right}
-  i3-msg move workspace to output {left,right,left,right}
-
 {shift+,_} Print
   flameshot {gui,full -p ~/Pictures}
 
@@ -41,4 +35,3 @@ alt + {p,j,k}
 
 super + g
   ~/.config/sxhkd/gamemode.sh toggle
-
