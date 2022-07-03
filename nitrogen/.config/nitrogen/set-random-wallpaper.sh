@@ -40,7 +40,7 @@ cp "${BG_LIST[$SELECTED_BG]}" "${CACHE_DIR}"/next_bg_image.jpg
 COUNT=1
 for RES in $(xrandr --current | grep '*' | uniq | awk '{print $1}');
 do
-  convert "${CACHE_DIR}"/next_bg_image.jpg -quality 100 -resize $RES! "${CACHE_DIR}"/$COUNT.jpg
+  convert "${CACHE_DIR}"/next_bg_image.jpg -quality 100 -resize $RES^ -extent $RES "${CACHE_DIR}"/$COUNT.jpg
   let COUNT++
 done;
 
