@@ -29,7 +29,7 @@ gaps outer 0
 # colors
 set $bg-color 	         #e2bf7f
 set $inactive-bg-color   #272a34
-set $text-color          #f3f4f5
+set $text-color          #1a1c21
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #ec407a
 
