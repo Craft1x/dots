@@ -63,7 +63,7 @@ run ~/.config/i3/alternating_layouts.py
 # local autostarts
 [ -f ~/.other/autostart-local.sh ] && run ~/.other/autostart-local.sh 
 
-sleep 2 && run configureKeyboard && run ~/.config/sxhkd/launch.sh 
+sleep 2 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/launch.sh
 
 # waiting for all to finish
 wait
