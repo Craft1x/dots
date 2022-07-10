@@ -2,8 +2,12 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-DATA=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/8f54298fa462dd30/battery org.kde.kdeconnect.device.battery.charge` || ( echo ""; return 0; )
+DATA=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/8f54298fa462dd30/battery org.kde.kdeconnect.device.battery.charge` ||  (echo "" && exit 0); 
 ISCHARGING=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/8f54298fa462dd30/battery org.kde.kdeconnect.device.battery.isCharging`
+
+if [ $DATA -le 0 ]; then
+  echo "" && exit 0; 
+fi
 
 COLOR="${green}"
 SEPCOLOR="#3F5360"

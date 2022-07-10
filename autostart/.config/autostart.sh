@@ -65,5 +65,8 @@ run ~/.config/i3/alternating_layouts.py
 
 sleep 2 && run configureKeyboard && run ~/.config/sxhkd/launch.sh 
 
+# just in case
+sleep 5 && run configureKeyboard
+
 # waiting for all to finish
 wait
