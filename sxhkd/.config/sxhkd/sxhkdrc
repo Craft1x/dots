@@ -1,71 +1,71 @@
 # window moving and switching
-super + {_,shift+}{h,j,k,l,Left,Down,Up,Right}
+mod4 + {_,shift+}{h,j,k,l,Left,Down,Up,Right}
   i3-msg {focus,move} {left,down,up,right,left,down,up,right}
 
-super + f
+mod4 + f
   i3-msg fullscreen toggle
 
-super + {b,v}
+mod4 + {b,v}
   i3-msg split {h,v}
 
-super + s; {t,s}
+mod4 + s; {t,s}
   i3-msg layout {tabbed,toggle split}
 
-super + shift + space
+mod4 + shift + space
   i3-msg floating toggle
 
-super + {space}
+mod4 + {space}
   i3-msg focus {mode_toggle}
 
-super + {0-9}
+mod4 + {0-9}
   i3-msg workspace {0-9}
 
-super + shift {0-9}
+mod4 + shift {0-9}
   echo {0-9} | xargs -I _ i3-msg move container to workspace _, workspace _, focus
 
-super + ctrl + {h,l,Left,Right}
+mod4 + ctrl + {h,l,Left,Right}
   i3-msg resize {shrink,grow,shrink,grow} width 10 px or 10 ppt
 
-super + ctrl + {j,k,Down,Up}
+mod4 + ctrl + {j,k,Down,Up}
   i3-msg resize {shrink,grow,shrink,grow} height 10 px or 10 ppt
 
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
   light {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
 
-super + Tab
+mod4 + Tab
   ~/.config/i3/i3-cycle-windows 
 
-super + shift + Tab
+mod4 + shift + Tab
   i3-msg workspace next
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute,equal,minus,BackSpace}
   pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
 
-super + {equal,minus,BackSpace}
+mod4 + {equal,minus,BackSpace}
   pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
 
 {XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
   playerctl {play,pause,next,previous}
 
-super + {p,bracketleft,bracketright}
+mod4 + {p,bracketleft,bracketright}
   playerctl {play-pause,previous,next}
 
 alt + shift + {c,x}
   {i3-msg kill, bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'}
 
-super + shift + ctrl + {l,h,Left,Right}
+mod4 + shift + ctrl + {l,h,Left,Right}
   i3-msg move workspace to output {left,right,left,right}
 
-super + shift + r
+mod4 + shift + r
   i3-msg restart
 
-super + shift + w
+mod4 + shift + w
   ~/.config/nitrogen/set-random-wallpaper.sh
 
-super + Return
+mod4 + Return
   kitty ~
 
-super + {i,o}+{_,shift}
+mod4 + {i,o}+{_,shift}
   i3-msg gaps {inner,outer} current {plus,minus} 20
 
 alt + m
@@ -77,23 +77,23 @@ alt + f
 alt + {d,e,t}
   nemo {~/Downloads,~,`mktemp -d`}
 
-super + {_,shift+}m
+mod4 + {_,shift+}m
   i3-msg sticky {enable,disable}
 
 {shift+,_} Print
   flameshot {gui,full -p ~/Pictures}
 
-super + shift + t 
+mod4 + shift + t 
   ps -e | grep picom && pkill picom || picom --experimental-backends --backend glx -b
 
-super + {d,e,c,x}
+mod4 + {d,e,c,x}
   ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh}
 
-super + ctrl + v; {1,2,3,4,5}
+mod4 + ctrl + v; {1,2,3,4,5}
   ~/.config/sxhkd/paste.sh {0,1,2,3,4}
 
 alt + {p,j,k}
   xdotool key --window "$(xdotool search --class mpv)" {p,J,K}
 
-super + g
+mod4 + g
   ~/.config/sxhkd/gamemode.sh toggle

@@ -4,7 +4,7 @@ source "$HOME/.config/polybar/scripts/source-colors.sh"
 
 TOTAL=$(ifstat --interval=1 \
   | tail +4 \
-  | grep "wlan\|enp" \
+  | grep "wlan\|enp\|wlp" \
   | tr -s ' ' \
   | cut -d ' ' -f 6,8 \
   | numfmt --from "auto"   \
