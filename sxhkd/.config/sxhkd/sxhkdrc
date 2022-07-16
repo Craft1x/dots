@@ -50,6 +50,9 @@ mod4 + {equal,minus,BackSpace}
 mod4 + {p,bracketleft,bracketright}
   playerctl {play-pause,previous,next}
 
+mod4 + {i,o}
+  playerctl position {5-,5+} && ~/.config/i3/notify_track_pos.sh
+
 alt + shift + {c,x}
   {i3-msg kill, bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'}
 
@@ -65,7 +68,7 @@ mod4 + shift + w
 mod4 + Return
   kitty ~
 
-mod4 + {i,o}+{_,shift}
+mod4 + {y,u}+{_,shift}
   i3-msg gaps {inner,outer} current {plus,minus} 20
 
 alt + m
