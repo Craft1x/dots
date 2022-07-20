@@ -18,4 +18,4 @@ elif [ $P100 -ge 200 ]; then
 fi
 
 
-echo "%{F$COLOR}$ICON%{F-} ${P30}"
+echo $separator "%{F$COLOR}$ICON%{F-} ${P30}"

@@ -2,8 +2,10 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-DATA=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/8f54298fa462dd30/battery org.kde.kdeconnect.device.battery.charge` ||  (echo "" && exit 0); 
-ISCHARGING=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/8f54298fa462dd30/battery org.kde.kdeconnect.device.battery.isCharging`
+ID="8f54298fa462dd30"
+
+DATA=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.charge` ||  (echo "" && exit 0); 
+ISCHARGING=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.isCharging`
 
 if [ $DATA -le 0 ]; then
   echo "" && exit 0; 
@@ -51,8 +53,8 @@ elif [ $DATA -ge 20 ]; then
 elif [ $DATA -ge 5 ]; then 
 	ICON=""
 fi
-
 fi
 
+FINDCOMMAND="qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/findmyphone org.kde.kdeconnect.device.findmyphone.ring"
 
-echo "$separator %{F$COLOR}$ICON%{F-} ${DATA}"
+echo $separator %{A1:$FINDCOMMAND:}%{F$COLOR}$ICON%{F-} ${DATA}%{A}
