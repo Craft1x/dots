@@ -19,7 +19,8 @@ NAME="Link to $FILE"
 
 #Check not overwriting an existing file or directory
 if [ -e "$DEST/$NAME" ]; then
-  zenity --info --width=250 --text="Error creating link. $DEST/$NAME already exists. Try again."
+  # zenity --info --width=250 --text="Error creating link. $DEST/$NAME already exists. Try again."
+  echo "already exist"
   exit 1
 fi
 #Is destination writeable?

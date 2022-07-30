@@ -9,12 +9,15 @@ enable() {
   mv "$CONFIG/sxhkdrc" "$CONFIG/sxhkdrc-normal"
   cp "$CONFIG/sxhkdrc-game" "$CONFIG/sxhkdrc"
   bash ~/.config/sxhkd/launch.sh
+  ps -e | grep picom && pkill picom 
 }
 
 disable() {
   notify-send -r 69360 -i "$HOME/.config/sxhkd/icons/games.svg" "Game mode : off"
   mv "$CONFIG/sxhkdrc-normal" "$CONFIG/sxhkdrc"
   bash ~/.config/sxhkd/launch.sh
+
+  ps -e | grep picom || picom -b
 }
 
 toggle() {

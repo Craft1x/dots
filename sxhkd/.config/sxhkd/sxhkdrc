@@ -24,10 +24,10 @@ mod4 + shift {0-9}
   echo {0-9} | xargs -I _ i3-msg move container to workspace _, workspace _, focus
 
 mod4 + grave
-  i3-msg move scratchpad 
+  i3-msg scratchpad show
 
 mod4 + shift + grave
-  i3-msg scratchpad show
+  i3-msg move scratchpad
 
 mod4 + ctrl + {h,l,Left,Right}
   i3-msg resize {shrink,grow,shrink,grow} width 10 px or 10 ppt
@@ -84,7 +84,7 @@ alt + f
   firefox-developer-edition
 
 alt + {d,e,t}
-  nemo {~/Downloads,~,`mktemp -d`}
+  nemo {~/Downloads,~,"`mktemp -d --suffix=' 🔴'`"}
 
 mod4 + {_,shift+}m
   i3-msg sticky {enable,disable}
@@ -93,7 +93,7 @@ mod4 + {_,shift+}m
   flameshot {gui,full -p ~/Pictures}
 
 mod4 + shift + t 
-  ps -e | grep picom && pkill picom || picom --experimental-backends --backend glx -b
+  ps -e | grep picom && pkill picom || picom -b
 
 mod4 + {d,e,c,x}
   ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh}
