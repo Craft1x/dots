@@ -51,13 +51,13 @@ mod4 + {equal,minus,BackSpace}
   pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
 
 {XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
-  playerctl {play,pause,next,previous}
+  ~/.config/i3/playerctl.sh {play,pause,next,previous}
 
 mod4 + {p,bracketleft,bracketright}
-  playerctl {play-pause,previous,next}
+  ~/.config/i3/playerctl.sh {play-pause,previous,next}
 
 mod4 + {i,o}
-  playerctl position {5-,5+} && ~/.config/i3/notify_track_pos.sh
+  ~/.config/i3/playerctl.sh position {5-,5+} && ~/.config/i3/notify_track_pos.sh
 
 alt + shift + {c,x}
   {i3-msg kill, bash -c '[[ `xdotool getwindowfocus getwindowname` != "i3" ]] && xdotool getwindowfocus windowkill'}
@@ -106,3 +106,6 @@ alt + {p,j,k}
 
 mod4 + g
   ~/.config/sxhkd/gamemode.sh toggle
+
+mod4 + ctrl + p
+  ~/.config/rofi/audio.sh

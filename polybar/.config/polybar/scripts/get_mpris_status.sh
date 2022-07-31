@@ -74,6 +74,15 @@ get_info() {
     esac
 }
 
+if [ -f /tmp/player-selected ]; then
+  PLAYER=$(cat /tmp/player-selected)
+  if [ -n $PLAYER ] && [ `playerctl -p $PLAYER status` ]; then
+    get_info $PLAYER $2 && exit 0
+  fi
+  rm /tmp/player-selected
+fi
+
+
 # manually go through players
 read -d'\n' -ra PLAYERS <<<"$(playerctl -l 2>/dev/null)"
 declare -a PAUSED

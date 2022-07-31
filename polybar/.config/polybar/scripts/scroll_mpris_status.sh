@@ -2,8 +2,12 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-cmd="${0%/*}/get_mpris_status.sh $1" 
-cmd_match="${0%/*}/get_mpris_match.sh $1" 
+
+[ -f /tmp/player-selected ] && PLAYER=$(cat /tmp/player-selected)
+playerctl -p $PLAYER status || rm /tmp/player-selected
+
+cmd="${0%/*}/get_mpris_status.sh $PLAYER"
+cmd_match="${0%/*}/get_mpris_match.sh $PLAYER"
 
 # zscroll -l 900 \
 #     --scroll-padding "$(printf ' %.0s' {1..8})" \
