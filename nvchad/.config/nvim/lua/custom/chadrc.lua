@@ -9,11 +9,15 @@ local M = {}
  --  theme = "gruvchad",
 --}
 
-M.mappings = {
+-- M.mappings = {
    -- custom = {}, -- custom user mappings
 
-   misc = {
-      copy_whole_file = "<leader>a" -- copy all contents of current buffer
-   }
- }
+   -- misc = {
+   --    copy_whole_file = "<leader>a" -- copy all contents of current buffer
+ --   }
+ -- }
+
+M.plugins = {
+   user = require "custom.plugins"
+}
 return M

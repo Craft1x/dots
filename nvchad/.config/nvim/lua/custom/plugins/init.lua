@@ -1,6 +1,7 @@
 -- /lua/custom/plugins/init.lua
--- return {
---    { "elkowar/yuck.vim", ft = "yuck" },
+ return {
+  ["sbdchd/neoformat"] = {},
+    -- { "sbdchd/neoformat" },
 --    { "ellisonleao/glow.nvim", cmd = "Glow" },
--- }
+ }
 -- just an example!

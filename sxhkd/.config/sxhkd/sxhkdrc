@@ -109,3 +109,6 @@ mod4 + g
 
 mod4 + ctrl + p
   ~/.config/rofi/audio.sh
+
+mod4 + ctrl + g
+  ~/.config/rofi/gaps.sh
