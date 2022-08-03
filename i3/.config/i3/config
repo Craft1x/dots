@@ -1,10 +1,6 @@
 # i3 config file (v4)
-#  ___ _____    ____ ___  _   _ _____ ___ ____ 
-# |_ _|___ /   / ___/ _ \| \ | |  ___|_ _/ ___|
-#  | |  |_ \  | |  | | | |  \| | |_   | | |  _ 
-#  | | ___) | | |__| |_| | |\  |  _|  | | |_| |
-# |___|____/   \____\___/|_| \_|_|   |___\____|
-# 
+# vim: filetype=i3config
+
 # alt
 set $mod Mod4
 # super
@@ -12,7 +8,6 @@ set $sup Mod1
 
 # font for window titles
 font pango:System San Francisco Display 11
-# font pango:monospace 8
 
 # disable titlebar
 default_border pixel 3
@@ -22,11 +17,9 @@ title_align center
 
 floating_modifier $mod
 
-# gaps
 gaps inner 20
 gaps outer 0
 
-# colors
 set $bg-color 	         #e2bf7f
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
@@ -35,41 +28,21 @@ set $urgent-bg-color     #ec407a
 
 set $bar-color           #272a34
 
-# window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          $bg-color
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
 
-# force window decorations
 hide_edge_borders both
 focus_follows_mouse no
 
-#	 ____ _____  _    ____ _____ _   _ ____  
-#	/ ___|_   _|/ \  |  _ \_   _| | | |  _ \ 
-#	\___ \ | | / _ \ | |_) || | | | | | |_) |
-#	 ___) || |/ ___ \|  _ < | | | |_| |  __/ 
-#	|____/ |_/_/   \_\_| \_\|_|  \___/|_|
-#	
-
 exec --no-startup-id ~/.config/autostart.sh
 
-#
-# __        _____ _   _ ____   _____        ______  
-# \ \      / /_ _| \ | |  _ \ / _ \ \      / / ___| 
-#  \ \ /\ / / | ||  \| | | | | | | \ \ /\ / /\___ \ 
-#   \ V  V /  | || |\  | |_| | |_| |\ V  V /  ___) |
-#    \_/\_/  |___|_| \_|____/ \___/  \_/\_/  |____/ 
-#
-
-# print all window titles bold
 for_window [class=".*"] title_formae "<b>%title</b>"
-
 for_window [class="Evince"] border pixel 3
 for_window [class="(?i)gnome"] border pixel 3
 for_window [class="Gcolor3"] border pixel 3
-
 for_window [class="Gnome-calendar"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Ulauncher"] floating enable
@@ -77,30 +50,20 @@ for_window [class="Gcolor3"] floating enable
 for_window [class="gnome-calculator"] floating enable
 for_window [class="org.gnome.clocks"] floating enable
 for_window [title="^About.*"] floating enable
-
 for_window [title="GLava"] move container to workspace 9
-
 for_window [title=".*Emulator.*"] floating enable, move container to workspace 8
-
 for_window [class="Virt-manager"] move container to workspace 8, layout tabbed, focus
 for_window [class="VirtualBox Manager"] move container to workspace 8, layout tabbed, focus
 for_window [class="VirtualBox"] move container to workspace 8, layout tabbed, focus
 for_window [class="Vmplayer"] move container to workspace 8, layout tabbed, focus
-
 for_window [class="KotatogramDesktop"] move container to workspace 5
-
 for_window [class="Unity"] move container to workspace 3, layout tabbed
 for_window [class="UnityHub"] move container to workspace 3, layout tabbed, focus
-
 for_window [class="jetbrains-rider"] move container to workspace 3, layout tabbed, focus
 for_window [title="win0"] move container to workspace 3, floating enable
 for_window [class="realvnc-vncviewer"] move container to workspace 7, layout tabbed, focus
-
 for_window [class=".exe$"] move container to workspace 10, focus
 for_window [class="Lutris"] move container to workspace 10, focus
-
 for_window [class="flameshot"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Input-remapper-gtk"] floating enable
-
-# vim: filetype=i3config

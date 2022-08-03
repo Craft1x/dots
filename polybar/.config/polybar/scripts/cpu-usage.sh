@@ -19,4 +19,4 @@ elif [ $DATA -ge 17 ]; then
 	ICON=""
 fi
 
-echo "$separator%{A1:kitty btop:} %{F$COLOR}$ICON%{F-} ${DATA}"%{A}
+echo "%{A1:kitty btop:} %{F$COLOR}$ICON%{F-} $DATA"%{A}

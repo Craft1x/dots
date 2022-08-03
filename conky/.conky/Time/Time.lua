@@ -32,7 +32,6 @@ conky.config = {
 	override_utf8_locale = true,
 	use_spacer = 'left',
 
-
 	minimum_width = 0, minimum_height = 0,
 };
 

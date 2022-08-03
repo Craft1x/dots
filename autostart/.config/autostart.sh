@@ -56,8 +56,9 @@ run gsettings set org.nemo.window-state start-with-sidebar false
 #bar
 run $HOME/.config/polybar/launch.sh 
 
-#exec_always --no-startup-id autotiling
 run ~/.config/i3/alternating_layouts.py 
+
+run ~/.config/i3/layout-manager.py
 
 
 # local autostarts
