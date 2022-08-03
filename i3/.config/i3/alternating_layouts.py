@@ -6,17 +6,14 @@ from i3ipc import Connection, Event
 from pynput.mouse import Button, Controller
 from pynput.mouse import Listener
 from pynput import mouse
+from time import sleep
 
 blocked = False
 
 def on_click(x, y, button, pressed):
-    global last
     global blocked
     if button == Button.right: 
-        if pressed == True:
-            blocked = True;
-        else:
-            blocked = False;
+        blocked = pressed
 
 
 
@@ -61,40 +58,22 @@ def set_layout(i3, e):
                i3.command('split h')
 
 
-def print_help():
-    print("Usage: " + sys.argv[0] + " [-p path/to/pid.file]")
-    print("")
-    print("Options:")
-    print("    -p path/to/pid.file   Saves the PID for this program in the filename specified")
-    print("")
-
-
 def main():
     """
     Main function - listen for window focus
         changes and call set_layout when focus
         changes
     """
-    opt_list, _ = getopt.getopt(sys.argv[1:], 'hp:')
-    pid_file = None
-    for opt in opt_list:
-        if opt[0] == "-h":
-            print_help()
-            sys.exit()
-        if opt[0] == "-p":
-            pid_file = opt[1]
-
-    if pid_file:
-        with open(pid_file, 'w') as f:
-            f.write(str(os.getpid()))
-
     global mouse
     listener = mouse.Listener(on_click=on_click)
     listener.start()
 
-    i3 = Connection()
-    i3.on(Event.WINDOW_FOCUS, set_layout)
-    i3.main()
+    while True:
+        i3 = Connection()
+        i3.on(Event.WINDOW_FOCUS, set_layout)
+        i3.main()
+        sleep(2);
+        print("i3 died, restarting...")
 
 
 if __name__ == "__main__":
