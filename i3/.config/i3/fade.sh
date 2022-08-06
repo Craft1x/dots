@@ -1,11 +1,19 @@
 #!/bin/bash
-xrandr --output HDMI-A-0 --brightness 0
-xrandr --output DisplayPort-0 --brightness 0
+DISP=$(xrandr --listmonitors | tail -n +2 | tr -s " " | cut -d " " -f5)
+
+setBrightness ()
+{
+  for D in $DISP
+  do
+    xrandr --output $D --brightness $1
+  done
+}
+
+setBrightness 0
 
 sleep 1
 
-xrandr --output HDMI-A-0 --brightness 1
-xrandr --output DisplayPort-0 --brightness 1
+setBrightness 1
 
 #
 # xrandr --output HDMI-A-0 --brightness 0
