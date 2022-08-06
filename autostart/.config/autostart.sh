@@ -19,8 +19,11 @@ configureKeyboard() {
   setxkbmap -option altwin:swap_alt_win 
 }
 
+run $HOME/.config/i3/fade.sh
+
 # set screen position
 test -f ~/.screenlayout/layout.sh && run ~/.screenlayout/layout.sh 
+
 
 run hsetroot -solid "#000000" && run ~/.config/nitrogen/set-random-wallpaper.sh 
 
@@ -64,7 +67,7 @@ run ~/.config/i3/layout-manager.py
 # local autostarts
 [ -f ~/.other/autostart-local.sh ] && run ~/.other/autostart-local.sh 
 
-sleep 1 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/launch.sh
+sleep 2 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/launch.sh
 
 # just in case
 sleep 5 && run configureKeyboard

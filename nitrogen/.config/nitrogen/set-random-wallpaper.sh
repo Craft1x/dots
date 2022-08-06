@@ -23,6 +23,11 @@ touch "${CACHE_DIR}"/lockfile
 # refreshing wallpaper image
 nitrogen --restore > /dev/null 2>&1 &
 
+# provide some cpu time for other things like fade in animations
+UPTIME=$(</proc/uptime)
+UPTIME=${UPTIME%%.*}
+[ $UPTIME -le 10 ] && sleep 5
+
 # Feeding random generator with the date in seconds (UNIX time)
 RANDOM=$$$(date +%s)
 
