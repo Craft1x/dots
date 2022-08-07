@@ -49,4 +49,7 @@ do
   let COUNT++
 done;
 
+# Copy image for login manager
+[ -d /usr/share/sddm/Backgrounds ] && cp $CACHE_DIR/1.jpg /usr/share/sddm/Backgrounds
+
 rm "${CACHE_DIR}"/lockfile 
