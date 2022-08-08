@@ -23,6 +23,9 @@ touch "${CACHE_DIR}"/lockfile
 # refreshing wallpaper image
 nitrogen --restore > /dev/null 2>&1 &
 
+# set a matching border color 
+$HOME/.config/i3/set_border_color.sh
+
 # provide some cpu time for other things like fade in animations
 UPTIME=$(</proc/uptime)
 UPTIME=${UPTIME%%.*}
