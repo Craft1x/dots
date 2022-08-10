@@ -23,8 +23,8 @@ touch "${CACHE_DIR}"/lockfile
 # refreshing wallpaper image
 nitrogen --restore > /dev/null 2>&1 &
 
-# set a matching border color 
-$HOME/.config/i3/set_border_color.sh
+# set a matching window border color 
+$HOME/.config/i3/set_border_color.sh set
 
 # provide some cpu time for other things like fade in animations
 UPTIME=$(</proc/uptime)
@@ -54,5 +54,10 @@ done;
 
 # Copy image for login manager
 [ -d /usr/share/sddm/Backgrounds ] && cp $CACHE_DIR/1.jpg /usr/share/sddm/Backgrounds
+
+# generate a matching window border color 
+$HOME/.config/i3/set_border_color.sh next
+
+
 
 rm "${CACHE_DIR}"/lockfile 
