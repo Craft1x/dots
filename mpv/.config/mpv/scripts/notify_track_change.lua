@@ -1,6 +1,6 @@
 local utils = require "mp.utils"
 
-local cover_filenames = { "cover.png", "cover.jpg", "cover.jpeg",
+local cover_filenames = { ".cover.png","cover.png", "cover.jpg", "cover.jpeg",
 "folder.jpg", "folder.png", "folder.jpeg",
 "AlbumArtwork.png", "AlbumArtwork.jpg", "AlbumArtwork.jpeg" }
 

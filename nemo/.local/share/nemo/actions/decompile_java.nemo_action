@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Decompile
+Comment=Decompile Java with CFR
+Exec=<scripts/decompile_java.sh %F>
+Icon-Name=code-class
+Selection=one
+Extensions=.jar;.class;
+EscapeSpaces=true
+Dependencies=cfr;
