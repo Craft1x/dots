@@ -92,11 +92,11 @@ for player in "${PLAYERS[@]}"; do
     p_status=$(playerctl -p "$player" status 2>/dev/null)
 
     # if we have one playing, we'll use it and EXIT
-    if [ "$p_status" = "Playing"  ]; then
+    # if [ "$p_status" = "Playing"  ]; then
         # send_hook 1
         get_info "$player" "$2"
         exit 0;
-    fi
+    # fi
 
     [ "$p_status" = "Paused" ] && PAUSED+=("$player")
 done

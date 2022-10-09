@@ -12,6 +12,7 @@ font pango:System San Francisco Display 11
 # disable titlebar
 default_border pixel 3
 default_floating_border pixel 3 
+for_window [class="^.*"] border pixel 3
 
 title_align center
 
@@ -20,7 +21,7 @@ floating_modifier $mod
 gaps inner 20
 gaps outer 0
 
-set $bg-color 	         #99b3ff
+set $bg-color 	         #99e9ff
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
 set $inactive-text-color #676E7D
@@ -38,7 +39,7 @@ focus_follows_mouse no
 
 exec --no-startup-id ~/.config/autostart.sh
 
-for_window [class=".*"] title_formae "<b>%title</b>"
+for_window [class=".*"] title_format "<b>%title</b>"
 for_window [class="Evince"] border pixel 3
 for_window [class="(?i)gnome"] border pixel 3
 for_window [class="Gcolor3"] border pixel 3
@@ -48,7 +49,8 @@ for_window [class="Ulauncher"] floating enable
 for_window [class="Gcolor3"] floating enable
 for_window [class="gnome-calculator"] floating enable
 for_window [class="org.gnome.clocks"] floating enable
-for_window [title="^About.*"] floating enable
+# for_window [title="^About.*"] floating enable
+for_window [class="^Minecraft*"] floating enable
 for_window [title="GLava"] move container to workspace 9
 for_window [title=".*Emulator.*"] floating enable, move container to workspace 8
 for_window [class="Virt-manager"] move container to workspace 8, layout tabbed, focus

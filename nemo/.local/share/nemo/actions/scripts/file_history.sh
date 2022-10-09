@@ -3,6 +3,7 @@
 LOCATION="$HOME/.cache/file_history"
 
 FILE=`basename "$1"`
+echo $FILE
 
 rm -fr $LOCATION
 mkdir -p $LOCATION

@@ -72,5 +72,8 @@ sleep 2 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/
 # just in case
 sleep 5 && run configureKeyboard
 
+#usb monitor
+run $HOME/.config/i3/usb_monitor.sh
+
 # waiting for all to finish
 wait
