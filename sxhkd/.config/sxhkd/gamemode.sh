@@ -17,7 +17,7 @@ disable() {
   mv "$CONFIG/sxhkdrc-normal" "$CONFIG/sxhkdrc"
   bash ~/.config/sxhkd/launch.sh
 
-  ps -e | grep picom || picom -b
+  ps -e | grep picom || picom --backend glx -b
 }
 
 toggle() {

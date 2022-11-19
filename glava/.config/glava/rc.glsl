@@ -200,7 +200,7 @@
    This option does nothing when using the "fifo" audio
    backend. Instead, an ideal rate should be be configured
    in the application generating the output. */
-#request setsamplerate 22050
+#request setsamplerate 12050
 
 /*                    ** DEPRECATED **
    Force window geometry (locking the window in place), useful

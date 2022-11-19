@@ -10,12 +10,14 @@ COLOR3="${foreground}"
 COLOR4="${yellow}"
 
 DATE=`date "+%d"`
+WEEKDAY=`date "+%a"`
 MONTH=`date "+%b"`
 TIME=`date "+%I:%M %p"`
 # label = %{T2}%{T-} %date% %{F#ffd88e}%time%%{F-} 
 
 echo "$separator%{A1:gnome-calendar:} \
 %{F$COLOR}$ICON%{F-} \
+%{F$COLOR2}$WEEKDAY%{F-} \
 %{F$COLOR2}$DATE%{F-} \
 %{F$COLOR3}${MONTH}%{F-} \
 %{F$COLOR4}%{T1}${TIME}%{A}%{T-}%{F-}"
