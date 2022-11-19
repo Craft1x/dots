@@ -9,7 +9,7 @@ enable() {
   mv "$CONFIG/sxhkdrc" "$CONFIG/sxhkdrc-normal"
   cp "$CONFIG/sxhkdrc-game" "$CONFIG/sxhkdrc"
   bash ~/.config/sxhkd/launch.sh
-  ps -e | grep picom && pkill picom 
+  ps -e | grep picom && ~/.config/i3/activatecompositor.sh false
 }
 
 disable() {
@@ -17,7 +17,7 @@ disable() {
   mv "$CONFIG/sxhkdrc-normal" "$CONFIG/sxhkdrc"
   bash ~/.config/sxhkd/launch.sh
 
-  ps -e | grep picom || picom --backend glx -b
+  ps -e | grep picom || ~/.config/i3/activatecompositor.sh true
 }
 
 toggle() {

@@ -79,7 +79,7 @@ if [ -f /tmp/player-selected ]; then
   if [ -n $PLAYER ] && [ `playerctl -p $PLAYER status` ]; then
     get_info $PLAYER $2 && exit 0
   fi
-  rm /tmp/player-selected
+  rm -f /tmp/player-selected
 fi
 
 

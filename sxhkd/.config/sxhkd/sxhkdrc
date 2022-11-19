@@ -93,7 +93,7 @@ mod4 + {_,shift+}m
   flameshot {gui,full -p ~/Pictures}
 
 mod4 + shift + t 
-  ps -e | grep picom && pkill picom || picom --backend glx -b
+  ps -e | grep picom && ~/.config/i3/activatecompositor.sh false || ~/.config/i3/activatecompositor.sh true
 
 mod4 + {d,e,c,x}
   ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh}

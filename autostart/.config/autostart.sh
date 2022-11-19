@@ -28,7 +28,8 @@ test -f ~/.screenlayout/layout.sh && run ~/.screenlayout/layout.sh
 run hsetroot -solid "#000000" && run ~/.config/nitrogen/set-random-wallpaper.sh 
 
 # add picom for shadows and animtaions
-run picom --backend glx -b 
+run ~/.config/i3/activatecompositor.sh true
+
 
 # start polkit
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
