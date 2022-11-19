@@ -136,7 +136,11 @@ command -v lsd &> /dev/null && alias ls='lsd -l --icon never --group-dirs first'
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+     --color=fg:#CCCCCC,bg:#1e222a,hl:#FFFF00
+     --color=fg+:#62de84,bg+:#292d3e,hl+:#ffcb6b
+     --color=info:#959dcb,prompt:#62DE84,pointer:#62de84
+     --color=marker:#ff5572,spinner:#f07178,header:#1D918B'
 
 PATH="/home/$USER/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/$USER/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
