@@ -22,7 +22,7 @@
 #
 
 # Where to save the emojis file.
-EMOJI_FILE="$HOME/.cache/emojis.txt"
+EMOJI_FILE="$HOME/.config/rofi/emojis.txt"
 
 # Urls of emoji to download.
 # You can remove what you don't need.
