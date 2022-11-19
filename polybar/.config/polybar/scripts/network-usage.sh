@@ -2,9 +2,16 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-TOTAL=$(ifstat --interval=1 \
+INTERFACES=$(ifstat --interval=1 \
   | tail +4 \
-  | grep "wlan\|enp\|wlp" \
+  | grep "wlan\|enp\|wlp")
+
+if [ -z "$INTERFACES" ]
+then
+  exit 0
+fi
+
+TOTAL=$(echo $INTERFACES \
   | tr -s ' ' \
   | cut -d ' ' -f 6,8 \
   | numfmt --from "auto"   \
