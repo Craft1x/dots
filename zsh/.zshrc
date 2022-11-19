@@ -137,11 +137,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-<<<<<<< HEAD
      --color=fg:#CCCCCC,bg:#1e222a,hl:#ffcb6b
-=======
-     --color=fg:#CCCCCC,bg:#1e222a,hl:#FFFF00
->>>>>>> c7b2df1b63de91459f57b9977b945c24585ee2e0
      --color=fg+:#62de84,bg+:#292d3e,hl+:#ffcb6b
      --color=info:#959dcb,prompt:#62DE84,pointer:#62de84
      --color=marker:#ff5572,spinner:#f07178,header:#1D918B'
