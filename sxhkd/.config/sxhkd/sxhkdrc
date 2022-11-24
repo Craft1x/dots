@@ -95,8 +95,8 @@ mod4 + {_,shift+}m
 mod4 + shift + t 
   ps -e | grep picom && ~/.config/i3/activatecompositor.sh false || ~/.config/i3/activatecompositor.sh true
 
-mod4 + {d,e,c,x}
-  ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh}
+mod4 + {d,e,c,x,n}
+  ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh,calc.sh}
 
 mod4 + ctrl + v; {1,2,3,4,5}
   ~/.config/sxhkd/paste.sh {0,1,2,3,4}

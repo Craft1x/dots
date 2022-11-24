@@ -70,10 +70,9 @@ listview {
 
 mainbox {
     background-color:               @al;
-	border:							0% 0% 0% 0%;
+	  border:							0% 0% 0% 0%;
     border-radius:                  0% 0% 0% 0%;
-	border-color:					@ac;
-    children:                       [ inputbar, listview ];
+	  border-color:					@ac;
     spacing:                       	0%;
     padding:                        0%;
 }
@@ -113,3 +112,12 @@ element selected {
     border-radius:                  0px;
     border-color:                  	@bg;
 }
+
+textbox {
+    background-color:               @bg;
+    text-color:                     @fg;
+    orientation:                    horizontal;
+    border-radius:                  0%;
+    padding:                        0.6% 0.5% 0.6% 0.5%;
+}
+

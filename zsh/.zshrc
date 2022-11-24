@@ -114,6 +114,7 @@ alias i3edit='vim ~/.config/i3/config'
 alias viedit='nvim ~/.config/nvim/init.vim'
 alias vim='nvim'
 alias v='vim'
+alias svim='doasedit'
 alias neofetch='neofetch --backend kitty --source ~/.config/neofetch/arch.png'
 
 #Style the man pages
