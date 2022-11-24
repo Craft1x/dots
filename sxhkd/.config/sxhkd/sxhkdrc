@@ -36,7 +36,7 @@ mod4 + ctrl + {j,k,Down,Up}
   i3-msg resize {shrink,grow,shrink,grow} height 10 px or 10 ppt
 
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-  light {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
+  brillo -u 100000 -q {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
 
 mod4 + Tab
   ~/.config/i3/i3-cycle-windows 

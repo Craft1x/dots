@@ -24,7 +24,7 @@ while true; do
     if [[ $NOTIFIED == false ]]; then
       NOTIFIED=true
       notify-send "Low battery" -i laptopattention
-      light -S 20
+      brillo -S 20
     fi
   else
     NOTIFIED=false
