@@ -11,7 +11,9 @@ then
   exit 0
 fi
 
-TOTAL=$(echo $INTERFACES \
+TOTAL=$(ifstat --interval=1 \
+  | tail +4 \
+  | grep "wlan\|enp\|wlp" \
   | tr -s ' ' \
   | cut -d ' ' -f 6,8 \
   | numfmt --from "auto"   \
