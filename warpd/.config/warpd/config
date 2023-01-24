@@ -1,0 +1,9 @@
+hint_fgcolor: #FAFAFAFF
+indicator_color: #fafafa
+cursor_color: #ff0075
+acceleration: 1200
+exit: q esc
+hint_activation_key: A-M-n
+activation_key: A-M-m
+scroll_down: d
+scroll_up: u

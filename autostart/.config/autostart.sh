@@ -37,6 +37,8 @@ run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # notification daemon
 run dunst 
 
+run warpd
+
 # Start clipster daemon
 run clipster -d 
 run clipster -c --erase-entire-board 

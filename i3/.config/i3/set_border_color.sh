@@ -4,6 +4,7 @@ case "$1" in
   "set") 
     [ -f ~/.cache/i3-border ] && OLDVAL=`cat ~/.cache/i3-border` || OLDVAL="#ffc999"
     sed -i "s/^\(set\s*\$bg-color\s*\).*\$/\1$OLDVAL/" ~/.config/i3/config
+    # /home/craftix/test.sh $OLDVAL &
     i3-msg reload
     ;;
   "next") 

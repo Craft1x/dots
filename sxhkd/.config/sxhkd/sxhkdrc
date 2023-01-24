@@ -83,6 +83,9 @@ alt + m
 alt + f
   firefox-developer-edition
 
+alt + h
+  chromium  --app=https://www.deepl.com/translator --force-app-mode
+
 alt + {d,e,t}
   nemo {~/Downloads,~,"`mktemp -d --suffix=' 🔴'`"}
 
