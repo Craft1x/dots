@@ -2,9 +2,10 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-INTERFACES=$(ifstat --interval=1 \
-  | tail +4 \
-  | grep "wlan\|enp\|wlp")
+DEVICES="wlan\|enp\|wlp"
+
+INTERFACES=$(ip l \
+  | grep $DEVICES)
 
 if [ -z "$INTERFACES" ]
 then
@@ -13,7 +14,7 @@ fi
 
 TOTAL=$(ifstat --interval=1 \
   | tail +4 \
-  | grep "wlan\|enp\|wlp" \
+  | grep $DEVICES \
   | tr -s ' ' \
   | cut -d ' ' -f 6,8 \
   | numfmt --from "auto"   \
