@@ -39,9 +39,8 @@ run dunst
 
 run warpd
 
-# Start clipster daemon
-run clipster -d 
-run clipster -c --erase-entire-board 
+# Start greenclip daemon
+run greenclip daemon
 
 # Hide the mouse after no movement
 run unclutter 
@@ -52,7 +51,7 @@ command -v optimus-manager-qt && run optimus-manager-qt
 # exec --no-startup-id command -v kdeconnect-indicator && kdeconnect-indicator
 
 # conky clock widget
-command -v conky && run ~/.conky/conky-startup.sh 
+# command -v conky && run ~/.conky/conky-startup.sh 
 
 #enable num lock 
 run numlockx 
