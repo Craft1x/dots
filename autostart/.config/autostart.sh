@@ -39,6 +39,9 @@ run dunst
 
 run warpd
 
+# preload alacritty to save start time
+run alacritty -o "window.class=hidden_window" --hold -e xdo hide
+
 # Start greenclip daemon
 run greenclip daemon
 

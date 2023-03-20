@@ -71,8 +71,11 @@ mod4 + shift + r
 mod4 + shift + w
   ~/.config/nitrogen/set-random-wallpaper.sh
 
-mod4 + Return
-  kitty ~
+mod4  + Return
+  alacritty msg create-window --working-directory ~ || alacritty --working-directory ~
+
+alt + Return
+  urxvt -cd ~
 
 mod4 + {y,u}+{_,shift}
   i3-msg gaps {inner,outer} current {plus,minus} 20

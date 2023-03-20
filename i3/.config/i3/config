@@ -21,7 +21,7 @@ floating_modifier $mod
 gaps inner 20
 gaps outer 0
 
-set $bg-color 	         #99ffcc
+set $bg-color 	         #99c2ff
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
 set $inactive-text-color #676E7D
@@ -68,3 +68,4 @@ for_window [class="Lutris"] move container to workspace 10, focus
 for_window [class="flameshot"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Input-remapper-gtk"] floating enable
+for_window [title="hidden_window"] move container to workspace 99
