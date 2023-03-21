@@ -74,7 +74,7 @@ mod4 + shift + w
 mod4  + Return
   alacritty msg create-window --working-directory ~ || alacritty --working-directory ~
 
-alt + Return
+mod4 + shift + Return
   urxvt -cd ~
 
 mod4 + {y,u}+{_,shift}
