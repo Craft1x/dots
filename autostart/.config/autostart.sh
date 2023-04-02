@@ -75,7 +75,7 @@ run ~/.config/i3/layout-manager.py
 sleep 2 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/launch.sh
 
 # just in case
-sleep 5 && run configureKeyboard
+sleep 5 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/launch.sh
 
 #usb monitor
 run $HOME/.config/i3/usb_monitor.sh

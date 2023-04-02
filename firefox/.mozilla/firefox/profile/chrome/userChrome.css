@@ -230,7 +230,7 @@ toolbarspring,
     transition: width .2s;
 }
 #urlbar-container:focus-within, #urlbar-container:hover {
-    min-width: 300px !important;
+    min-width: 500px !important;
 }
 #urlbar-input:not(:focus-within) {
     mask: linear-gradient(to right, black calc(100% - 20px), transparent);
