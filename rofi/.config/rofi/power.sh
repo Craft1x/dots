@@ -11,7 +11,7 @@ length=${#strings[@]}
 
 for (( j=0; j<${length}; j++ ));
 do
-  prompt="$prompt${strings[$j]}\x00icon\x1f~/.config/rofi/icons/${icons[$j]}\n";
+  prompt="$prompt${strings[$j]}\x00icon\x1f~/.config/rofi/icons/power/${icons[$j]}\n";
 done
 
 result=`printf "$prompt" | rofi -no-lazy-grab -sort -sorting-method fzf -dmenu -p "" -i -theme $dir/"$theme"` 

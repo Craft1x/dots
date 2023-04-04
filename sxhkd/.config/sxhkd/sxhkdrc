@@ -92,29 +92,16 @@ alt + h
 alt + {d,e,t}
   nemo {~/Downloads,~,"`mktemp -d --suffix=' 🔴'`"}
 
-mod4 + {_,shift+}m
-  i3-msg sticky {enable,disable}
+mod4 + {_,shift+}apostrophe
+  i3-msg sticky {enable && notify-send -r 971 "Sticky",disable && notify-send -r 971 "Un-Sticky"}
 
-{shift+,_} Print
-  flameshot {gui,full -p ~/Pictures}
+{shift+,_} Print flameshot {gui,full -p ~/Pictures}
 
-mod4 + shift + t 
-  ps -e | grep picom && ~/.config/i3/activatecompositor.sh false || ~/.config/i3/activatecompositor.sh true
-
-mod4 + {d,e,c,x,n}
-  ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh,calc.sh}
+mod4 + {d,e,c,x,n,m}
+  ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh,calc.sh,full-menu.sh}
 
 mod4 + ctrl + v; {1,2,3,4,5}
   ~/.config/sxhkd/paste.sh {0,1,2,3,4}
 
 alt + {p,j,k}
   xdotool key --window "$(xdotool search --class mpv)" {p,J,K}
-
-mod4 + g
-  ~/.config/sxhkd/gamemode.sh toggle
-
-mod4 + ctrl + p
-  ~/.config/rofi/audio.sh
-
-mod4 + ctrl + g
-  ~/.config/rofi/gaps.sh

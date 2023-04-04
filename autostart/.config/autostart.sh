@@ -68,6 +68,8 @@ run ~/.config/i3/alternating_layouts.py
 
 run ~/.config/i3/layout-manager.py
 
+run ~/.config/i3/timer.py
+
 
 # local autostarts
 [ -f ~/.other/autostart-local.sh ] && run ~/.other/autostart-local.sh 

@@ -14,7 +14,7 @@ echo $DIST
 OPTION=$1
 case $OPTION in
   default)
-    i3-msg gaps outer current set 0, gaps inner current set 20
+    i3-msg gaps outer current set 0, gaps inner current set 15
     ;;
 
   compact)
@@ -23,7 +23,7 @@ case $OPTION in
 
   horizontal)
     i3-msg gaps horizontal current set 0, \
-      gaps inner current set 20, \
+      gaps inner current set 10, \
       gaps vertical current set `dp 16`
           ;;
 
@@ -46,7 +46,7 @@ case $OPTION in
           ;;
 
   zoomed)
-    i3-msg gaps outer current set `dp 17`, gaps inner current set 20
+    i3-msg gaps outer current set `dp 17`, gaps inner current set 8
     ;;
 
   spaced)

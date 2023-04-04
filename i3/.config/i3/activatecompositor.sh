@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 case "$1" in
+  "toggle")
+    ps -e | grep picom && ~/.config/i3/activatecompositor.sh false || ~/.config/i3/activatecompositor.sh true
+    ;;
+
   "true")
     picom --backend glx -b
     ;;
