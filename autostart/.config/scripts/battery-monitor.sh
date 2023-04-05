@@ -5,7 +5,7 @@ SUSPENDED=false
 while true; do
   sleep 5
   DATA=$(cat /sys/class/power_supply/BAT0/capacity) || ( echo ""; return 0; )
-  ISCHARGING=$(cat  | grep /sys/class/power_supply/BAT0/status -q Discharging && echo false || echo true)
+  ISCHARGING=$(grep /sys/class/power_supply/BAT0/status -q Discharging && echo false || echo true)
 
   [[ "$ISCHARGING" = true ]] && continue
 
