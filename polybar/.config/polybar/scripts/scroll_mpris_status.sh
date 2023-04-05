@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
 
-[ -f /tmp/player-selected ] && PLAYER=$(cat /tmp/player-selected) && playerctl -p $PLAYER status || rm -f /tmp/player-selected
+[ -f /tmp/player-selected ] && PLAYER=$(cat /tmp/player-selected) && playerctl -p "$PLAYER" status || rm -f /tmp/player-selected
 
 cmd="${0%/*}/get_mpris_status.sh $PLAYER"
 cmd_match="${0%/*}/get_mpris_match.sh"

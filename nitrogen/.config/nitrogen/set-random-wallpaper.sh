@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # It is needed to make nitrogen work correctly
 export DISPLAY=":0"
@@ -24,12 +24,12 @@ touch "${CACHE_DIR}"/lockfile
 nitrogen --restore > /dev/null 2>&1 &
 
 # set a matching window border color 
-$HOME/.config/i3/set_border_color.sh set
+~/.config/i3/set_border_color.sh set
 
 # provide some cpu time for other things like fade in animations
 UPTIME=$(</proc/uptime)
 UPTIME=${UPTIME%%.*}
-[ $UPTIME -le 10 ] && sleep 5
+[ "$UPTIME" -le 10 ] && sleep 5
 
 # Feeding random generator with the date in seconds (UNIX time)
 RANDOM=$$$(date +%s)
@@ -41,22 +41,22 @@ BG_LIST=("${BG_DIR}"/*.jpg)
 BG_NUM=$(ls -1 "${BG_DIR}" | wc -l)
 
 # Randomly select some number from the total number of wallpapers
-SELECTED_BG=$(( $RANDOM % ${BG_NUM} ))
+SELECTED_BG=$(( RANDOM % BG_NUM ))
 
 cp "${BG_LIST[$SELECTED_BG]}" "${CACHE_DIR}"/next_bg_image.jpg 
 
 COUNT=1
-for RES in $(xrandr --current | grep '*' | uniq | awk '{print $1}');
+for RES in $(xrandr --current | grep '\*' | uniq | awk '{print $1}');
 do
-  convert "${CACHE_DIR}"/next_bg_image.jpg -quality 100 -resize $RES^ -extent $RES "${CACHE_DIR}"/$COUNT.jpg
+  convert "${CACHE_DIR}"/next_bg_image.jpg -quality 100 -resize "$RES"^ -extent "$RES" "${CACHE_DIR}"/$COUNT.jpg
   let COUNT++
 done;
 
 # Copy image for login manager
-[ -d /usr/share/sddm/Backgrounds ] && cp $CACHE_DIR/1.jpg /usr/share/sddm/Backgrounds
+[ -d /usr/share/sddm/Backgrounds ] && cp "$CACHE_DIR"/1.jpg /usr/share/sddm/Backgrounds
 
 # generate a matching window border color 
-$HOME/.config/i3/set_border_color.sh next
+~/.config/i3/set_border_color.sh next
 
 
 

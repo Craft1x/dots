@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DIR="/tmp/autostart-logs"
 
@@ -7,7 +7,7 @@ mkdir -p $DIR
 
 run ()
 {
-echo `date -u +"%H:%M:%S"` "RUN:" "$@" >> $DIR"/log"
+echo "$(date -u +"%H:%M:%S")" "RUN:" "$@" >> $DIR"/log"
 $@ >> $DIR"/log" 2>&1 &
 }
 
@@ -19,7 +19,7 @@ configureKeyboard() {
   setxkbmap -option altwin:swap_alt_win 
 }
 
-run $HOME/.config/i3/fade.sh
+run ~/.config/i3/fade.sh
 
 # set screen position
 test -f ~/.screenlayout/layout.sh && run ~/.screenlayout/layout.sh 
@@ -62,7 +62,7 @@ run numlockx
 #hide sidebar in nemo
 run gsettings set org.nemo.window-state start-with-sidebar false 
 #bar
-run $HOME/.config/polybar/launch.sh 
+run ~/.config/polybar/launch.sh
 
 run ~/.config/i3/alternating_layouts.py 
 
@@ -80,7 +80,7 @@ sleep 2 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/
 sleep 5 && run configureKeyboard && pkill -USR1 -x sxhkd || run ~/.config/sxhkd/launch.sh
 
 #usb monitor
-run $HOME/.config/i3/usb_monitor.sh
+run ~/.config/i3/usb_monitor.sh
 
 # waiting for all to finish
 wait

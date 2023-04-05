@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 theme="style-noicon"
 dir="$HOME/.config/rofi"
 
-RES=`rofi -show run -theme $dir/"$theme" -dmenu -p "Timer" -theme-str 'listview { enabled: false;}'`
+RES=$(rofi -show run -theme "$dir"/"$theme" -dmenu -p "Timer" -theme-str 'listview { enabled: false;}')
 
-[[ ! -z $RES ]] && "$HOME/.config/i3/timer.py" sethuman "$RES"
+[[ -n $RES ]] && "$HOME/.config/i3/timer.py" sethuman "$RES"

@@ -2,7 +2,7 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-ENABLED=`head -n 1 $HOME/.config/sxhkd/sxhkdrc | grep -q gamemode && echo 1 || echo 0`
+ENABLED=$(head -n 1 ~/.config/sxhkd/sxhkdrc | grep -q gamemode && echo 1 || echo 0)
 
 if [[ $ENABLED == "0" ]]; then
   echo "" 

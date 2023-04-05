@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-DATA=`curl -s http://192.168.1.47:1337/getData` || (echo ""; exit 0)
-P30=`echo $DATA | cut -d " " -f3`
-P100=`echo $DATA | cut -d " " -f6`
+DATA=$(curl -s http://192.168.1.47:1337/getData) || (echo ""; exit 0)
+P30=$(echo $DATA | cut -d " " -f3)
+P100=$(echo $DATA | cut -d " " -f6)
 
 ICON=""
 COLOR="${yellow}"

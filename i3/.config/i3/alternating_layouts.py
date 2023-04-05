@@ -10,11 +10,11 @@ from time import sleep
 
 blocked = False
 
+
 def on_click(x, y, button, pressed):
     global blocked
-    if button == Button.right: 
+    if button == Button.right:
         blocked = pressed
-
 
 
 def find_parent(i3, window_id):
@@ -33,6 +33,7 @@ def find_parent(i3, window_id):
 
     return finder(i3.get_tree(), None)
 
+
 def set_layout(i3, e):
     """
         Set the layout/split for the currently
@@ -48,14 +49,14 @@ def set_layout(i3, e):
     parent = find_parent(i3, win.id)
 
     if (parent and parent.layout != 'tabbed'
-           and parent.layout != 'stacked'):
+            and parent.layout != 'stacked'):
 
-       if win.rect.height > win.rect.width:
-           if parent.orientation == 'horizontal':
-               i3.command('split v')
-       else:
-           if parent.orientation == 'vertical':
-               i3.command('split h')
+        if win.rect.height > win.rect.width:
+            if parent.orientation == 'horizontal':
+                i3.command('split v')
+        else:
+            if parent.orientation == 'vertical':
+                i3.command('split h')
 
 
 def main():
@@ -72,7 +73,7 @@ def main():
         i3 = Connection()
         i3.on(Event.WINDOW_FOCUS, set_layout)
         i3.main()
-        sleep(2);
+        sleep(2)
         print("i3 died, restarting...")
 
 

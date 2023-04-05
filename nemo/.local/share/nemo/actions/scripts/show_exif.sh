@@ -1,2 +1,2 @@
-#!/bin/bash
-kitty -e bash -c "/usr/bin/vendor_perl/exiftool \"$1\"  ; sleep infinity"
+#!/usr/bin/env bash
+"$HOME/.config/terminal.sh" -e bash -c "/usr/bin/vendor_perl/exiftool \"$1\"  ; sleep infinity"

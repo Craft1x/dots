@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 theme="style"
 dir="$HOME/.config/rofi"
 
@@ -9,14 +9,14 @@ commands=("$HOME/.config/rofi/gaps.sh" "$HOME/.config/rofi/calc.sh" "$HOME/.conf
 prompt=""
 length=${#strings[@]}
 
-for (( j=0; j<${length}; j++ ));
+for (( j=0; j<length; j++ ));
 do
   prompt="$prompt${strings[$j]}\x00icon\x1f$HOME/.config/rofi/icons/${icons[$j]}\n";
 done
 
-result=`printf "$prompt" | rofi -no-lazy-grab -sort -sorting-method fzf -dmenu -p "MENU" -i -theme $dir/"$theme"` 
+result=$(printf "$prompt" | rofi -no-lazy-grab -sort -sorting-method fzf -dmenu -p "MENU" -i -theme "$dir"/"$theme")
 
-for (( j=0; j<${length}; j++ ));
+for (( j=0; j<length; j++ ));
 do
-  [[ $result == ${strings[$j]} ]] && ${commands[$j]} && break
+  [[ $result == "${strings[$j]}" ]] && ${commands[$j]} && break
 done

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
@@ -76,8 +76,8 @@ get_info() {
 
 if [ -f /tmp/player-selected ]; then
   PLAYER=$(cat /tmp/player-selected)
-  if [ -n $PLAYER ] && [ `playerctl -p $PLAYER status` ]; then
-    get_info $PLAYER $2 && exit 0
+  if [[ -n $PLAYER ]] && [ "$(playerctl -p "$PLAYER" status)" ]; then
+    get_info "$PLAYER" "$2" && exit 0
   fi
   rm -f /tmp/player-selected
 fi

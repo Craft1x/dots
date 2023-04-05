@@ -1,15 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CURRENT=$(i3-msg -t get_workspaces | jq ".[] | select(.focused | IN(true))")
-HEIGHT=$(echo $CURRENT | jq  ".rect.height")
+HEIGHT=$(echo "$CURRENT" | jq  ".rect.height")
 
 dp ()
 {
-  echo $(echo $(($HEIGHT * $1 / 100)))
+  echo $(("$HEIGHT" * $1 / 100))
 }
-
-DIST=`dp 2`
-echo $DIST 
 
 OPTION=$1
 case $OPTION in

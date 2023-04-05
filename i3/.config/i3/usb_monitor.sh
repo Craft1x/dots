@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 udevadm monitor --kernel --property --subsystem-match=input | grep  --line-buffered "ACTION=add"  | \
   while read -r LINE; do \

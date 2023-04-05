@@ -103,7 +103,7 @@ while :; do
     #
     COLOR="${green}"
     echo $separator "%{F$COLOR}$status%{F-}"
-    echo ${ip} > /tmp/ip
+    echo "${ip}" > /tmp/ip
     previous_interface_state="$(interface_state)"
     previous_uplinks=$(uplinks)
     previous_connection_status=$(connected)

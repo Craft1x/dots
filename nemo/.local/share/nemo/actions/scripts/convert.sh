@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 type -a trash || notify-send "/bin/trash not found"
 
 newFormat=$(zenity --entry --title="Enter new file format" --text="New format:")

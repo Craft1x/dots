@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-source "$HOME/.config/polybar/scripts/source-colors.sh" 
-# label = %{T2}%{T-}%{A1:gnome-calendar:} %date% %{F#ffd88e}%time%%{F-} %{A}
+source "$HOME/.config/polybar/scripts/source-colors.sh"
 
 ICON=""
 COLOR="${white}"
 
-TIME=`python3 $HOME/.config/i3/timer.py getpretty`
+TIME=$(~/.config/i3/timer.py getpretty)
 
 if [[ $TIME == "off" ]] || [[ $TIME == "no socket" ]]; then
   echo "" 

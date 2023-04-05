@@ -22,8 +22,8 @@ TOTAL=$(ifstat --interval=1 \
   | awk '{ t1 += $1; t2 += $2 } END {print t1; print t2;}' \
   | numfmt --to=iec)
 
-DOWN=`echo $TOTAL | cut -d ' ' -f1`
-UP=`echo $TOTAL | cut -d ' ' -f2`
+DOWN=$(echo "$TOTAL" | head -n 1)
+UP=$(echo "$TOTAL" | tail -n 1)
 
 icon_color1="${cyan}"
 icon_color2="${red}"

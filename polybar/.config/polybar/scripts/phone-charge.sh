@@ -4,15 +4,14 @@ source "$HOME/.config/polybar/scripts/source-colors.sh"
 
 ID="8f54298fa462dd30"
 
-DATA=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.charge` ||  (echo "" && exit 0); 
-ISCHARGING=`qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.isCharging`
+DATA=$(qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.charge) ||  (echo "" && exit 0);
+ISCHARGING=$(qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.isCharging)
 
-if [ $DATA -le 0 ]; then
+if [ "$DATA" -le 0 ]; then
   echo "" && exit 0; 
 fi
 
 COLOR="${green}"
-SEPCOLOR="#3F5360"
 ICON=""
 
 if [ $DATA -ge 95 ]; then

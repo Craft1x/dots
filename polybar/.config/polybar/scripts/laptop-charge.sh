@@ -2,11 +2,10 @@
 
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
-DATA=`cat /sys/class/power_supply/BAT0/capacity` || ( echo ""; return 0; )
-ISCHARGING=`cat /sys/class/power_supply/BAT0/status | grep -q Discharging && echo false || echo true`
+DATA=$(cat /sys/class/power_supply/BAT0/capacity) || ( echo ""; return 0; )
+ISCHARGING=$(grep "Discharging" /sys/class/power_supply/BAT0/status -q && echo false || echo true)
 
 COLOR="${green}"
-SEPCOLOR="#3F5360"
 ICON=""
 
 if [ $DATA -ge 95 ]; then
