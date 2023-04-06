@@ -95,7 +95,8 @@ alt + {d,e,t}
 mod4 + {_,shift+}apostrophe
   i3-msg sticky {enable && notify-send -r 971 "Sticky",disable && notify-send -r 971 "Un-Sticky"}
 
-{shift+,_} Print flameshot {gui,full -p ~/Pictures}
+{shift+,_} Print
+  flameshot {gui,full -p ~/Pictures}
 
 mod4 + {d,e,c,x,n,m}
   ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh,calc.sh,full-menu.sh}
