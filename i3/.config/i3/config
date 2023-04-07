@@ -21,7 +21,7 @@ floating_modifier $mod
 gaps inner 15
 gaps outer 0
 
-set $bg-color 	         #99ffaf
+set $bg-color 	         #99ffed
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
 set $inactive-text-color #676E7D
@@ -52,7 +52,7 @@ for_window [class="org.gnome.clocks"] floating enable
 # for_window [title="^About.*"] floating enable
 for_window [class="^Minecraft*"] floating enable
 for_window [title="GLava"] move container to workspace 9
-for_window [title=".*Emulator.*"] floating enable, move container to workspace 8
+for_window [title=".*Android Emulator -.*"] floating enable
 for_window [class="Virt-manager"] move container to workspace 8, layout tabbed, focus
 for_window [class="VirtualBox Manager"] move container to workspace 8, layout tabbed, focus
 for_window [class="VirtualBox"] move container to workspace 8, layout tabbed, focus
