@@ -26,6 +26,6 @@ DOWN=$(echo "$TOTAL" | head -n 1)
 UP=$(echo "$TOTAL" | tail -n 1)
 
 icon_color1="${cyan}"
-icon_color2="${red}"
+icon_color2="${brightRed}"
 
 echo $separator "%{F$icon_color1}""""%{F-}" $DOWN "%{F$icon_color2}""""%{F-}" $UP
