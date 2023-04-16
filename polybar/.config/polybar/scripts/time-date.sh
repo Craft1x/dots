@@ -3,7 +3,7 @@
 source "$HOME/.config/polybar/scripts/source-colors.sh" 
 
 ICON=""
-COLOR="${pink}"
+COLOR="${brightRed}"
 COLOR2="${foreground}"
 COLOR3="${foreground}"
 COLOR4="${yellow}"
