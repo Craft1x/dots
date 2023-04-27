@@ -44,11 +44,11 @@ mod4 + Tab
 mod4 + shift + Tab
   i3-msg workspace next
 
-{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute,equal,minus,BackSpace}
-  pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+  ~/.config/i3/smooth-volume.sh {up,down,mute} && ~/.config/i3/notify_volume.sh
 
 mod4 + {equal,minus,BackSpace}
-  pamixer -{i 5,d 5,t} && ~/.config/i3/notify_volume.sh
+  ~/.config/i3/smooth-volume.sh {up,down,mute} && ~/.config/i3/notify_volume.sh
 
 {XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
   ~/.config/i3/playerctl.sh {play,pause,next,previous}
