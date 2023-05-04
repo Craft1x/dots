@@ -21,7 +21,7 @@ floating_modifier $mod
 gaps inner 15
 gaps outer 0
 
-set $bg-color 	         #ffcd99
+set $bg-color 	         #a499ff
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
 set $inactive-text-color #676E7D
@@ -44,6 +44,7 @@ for_window [class="Evince"] border pixel 3
 for_window [class="(?i)gnome"] border pixel 3
 for_window [class="Gcolor3"] border pixel 3
 for_window [class="Gnome-calendar"] floating enable
+for_window [class="Blueberry.py"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Ulauncher"] floating enable
 for_window [class="Gcolor3"] floating enable

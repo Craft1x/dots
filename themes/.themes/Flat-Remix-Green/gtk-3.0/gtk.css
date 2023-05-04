@@ -990,7 +990,6 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
     background-color: #575e74; }
   .primary-toolbar button:active, headerbar button:active, .primary-toolbar button:checked, headerbar button:checked {
     color: white;
-    border-color: #06a284;
     background-color: #06a284;
     background-clip: padding-box; }
     .primary-toolbar button:active:backdrop, headerbar button:active:backdrop, .primary-toolbar button:checked:backdrop, headerbar button:checked:backdrop {
