@@ -27,7 +27,7 @@ cmd_match="${0%/*}/get_mpris_match.sh"
 icon_color="${green}"
 icon_color_pause="${cyan}"
 
-zscroll -l 50 --before-text "♪ " --after-text " $separator" --delay 0.2  \
+zscroll -l 50 --before-text "♪ " --after-text " $separator" --delay 0.1  \
   --match-command "$cmd_match" \
   --match-text "Playing" "--before-text '%{F$icon_color}%{F-} '" \
   --match-text "Paused" "--before-text '%{F$icon_color_pause}契%{F-} '" \

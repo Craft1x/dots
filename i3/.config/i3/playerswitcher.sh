@@ -8,15 +8,19 @@ if [ "$(echo "$INSTANCES" | wc -w)" -lt 2 ]; then
 fi
 
 if [[ -z $PLAYER ]]; then
-  # echo "Setting the player"
-  PLAYER=$(echo "$INSTANCES" | cut -f 1 -d " ")
+  echo "Setting the player"
+  PLAYER=$(echo "$INSTANCES" | head -n 1)
+fi
+
+INDEX=$(echo "$INSTANCES" | grep -n "$PLAYER" | cut -d: -f1)
+INDEX=$((INDEX + 1))
+
+if [ $INDEX -gt $(echo "$INSTANCES" | wc -l) ]; then
+  INSTANCES=1
 fi
 
 INSTANCES_SHORT=$(echo "$INSTANCES" | sed "s/^.*$PLAYER //")
 
-# echo $PLAYER
-# echo $INSTANCES_SHORT
+NEXT_PLAYER=$(echo "$INSTANCES" | sed -n "${INDEX}p")
 
-PLAYER=$(echo "$INSTANCES_SHORT" | cut -f 1 -d " ")
-
-echo "$PLAYER" > /tmp/player-selected
+echo "$NEXT_PLAYER" > /tmp/player-selected

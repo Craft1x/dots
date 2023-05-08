@@ -21,7 +21,7 @@ floating_modifier $mod
 gaps inner 15
 gaps outer 0
 
-set $bg-color 	         #a499ff
+set $bg-color 	         #99ebff
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
 set $inactive-text-color #676E7D
