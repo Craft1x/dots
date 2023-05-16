@@ -18,6 +18,10 @@ extract_meta() {
     grep "$1\W" <<< "$meta" | awk '{$1=$2=""; print $0}' | sed 's/^ *//; s/; */;/g' | paste -s -d/ -
 }
 
+extract_meta_app() {
+  echo "$meta" | cut -d " " -f1 | head -n 1   
+}
+
 # if "icon" given, determine icon. otherwise, print metadata
 get_info() {
     if [ -z "$1" ]; then
@@ -25,15 +29,40 @@ get_info() {
         exit 1
     fi
 
-    meta=$(playerctl -p "$1" metadata)
+    if playerctl -p "$1" metadata > /dev/null 2>&1; then
+      meta=$(playerctl -p "$1" metadata)
+    else
+      INSTANCES=$(playerctl --list-all)
+
+      if [ "$(echo "$INSTANCES" | wc -w)" -lt 2 ]; then
+        # echo "Players < 2"
+        # echo "Failed to get metadata and no other players"
+        exit 1
+      fi
+
+
+      # echo "Switching to another (hopefully working) player"
+      ~/.config/i3/playerswitcher.sh
+      exit 1
+    fi
 
     # get title
     title=$(extract_meta title)
+
     # if no title, try url e.g. vlc
     if [ -z "$title" ]; then
         title=$(extract_meta url)
         title=$(urldecode "${title##*/}")
     fi
+
+    if [ -z "$title" ]; then
+      title=$(extract_meta_app)
+    fi
+
+    if [ -z "$title" ]; then
+      title="Player"
+    fi
+
 
     # if not "icon", display information and return
     if [ "$2" != "icon" ]; then

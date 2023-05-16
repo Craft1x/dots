@@ -19,8 +19,6 @@ if [ $INDEX -gt $(echo "$INSTANCES" | wc -l) ]; then
   INSTANCES=1
 fi
 
-INSTANCES_SHORT=$(echo "$INSTANCES" | sed "s/^.*$PLAYER //")
-
 NEXT_PLAYER=$(echo "$INSTANCES" | sed -n "${INDEX}p")
 
 echo "$NEXT_PLAYER" > /tmp/player-selected
