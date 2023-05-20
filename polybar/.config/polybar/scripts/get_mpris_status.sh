@@ -19,7 +19,7 @@ extract_meta() {
 }
 
 extract_meta_app() {
-  echo "$meta" | cut -d " " -f1 | head -n 1   
+  echo "$meta" | cut -d " " -f1 | head -n 1
 }
 
 # if "icon" given, determine icon. otherwise, print metadata

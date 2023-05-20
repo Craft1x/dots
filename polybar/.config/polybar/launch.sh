@@ -2,6 +2,9 @@
 
 DIR="$HOME/.config/polybar"
 
+# also kills children & kills this script :(
+# kill -9 $(pgrep -f 'polybar') 
+
 killall -q polybar -9
 
 # Wait until the processes have been shut down
