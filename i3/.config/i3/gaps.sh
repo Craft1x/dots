@@ -8,8 +8,7 @@ dp ()
   echo $(("$HEIGHT" * $1 / 100))
 }
 
-OPTION=$1
-case $OPTION in
+case $1 in
   default)
     i3-msg gaps outer current set 0, gaps inner current set 15
     ;;
