@@ -5,9 +5,6 @@ mod4 + {_,shift+}{h,j,k,l,Left,Down,Up,Right}
 mod4 + f
   i3-msg fullscreen toggle
 
-mod4 + {b,v}
-  i3-msg split {h,v}
-
 mod4 + s; {t,s}
   i3-msg layout {tabbed,toggle split}
 
@@ -100,6 +97,9 @@ mod4 + {_,shift+}apostrophe
 
 mod4 + {d,e,c,x,n,m}
   ~/.config/rofi/{launcher.sh,emoji.sh,clipboard.sh,power.sh,calc.sh,full-menu.sh}
+
+mod4 + v
+  dunstctl history-pop
 
 mod4 + ctrl + v; {1,2,3,4,5}
   ~/.config/sxhkd/paste.sh {0,1,2,3,4}

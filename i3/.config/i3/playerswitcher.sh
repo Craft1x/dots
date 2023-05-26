@@ -7,6 +7,8 @@ if [ "$(echo "$INSTANCES" | wc -w)" -lt 2 ]; then
   exit 0
 fi
 
+rm -f /tmp/player-info
+
 if [[ -z $PLAYER ]]; then
   echo "Setting the player"
   PLAYER=$(echo "$INSTANCES" | head -n 1)
