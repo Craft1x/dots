@@ -14,11 +14,11 @@
 
 # for alaritty
 if [ $# == 3 ] && [ "${1}" == "--" ]; then
-		alacritty msg create-window --title="$(basename "$3")" -e "${2}" "${3}" || alacritty --title="$(basename "$3")" -e "${2}" "${3}"
-    return
+		alacritty --title="$(basename "$3")" -e "${2}" "${3}"
+    exit 0
 fi
 
-alacritty msg create-window "$@" || alacritty "$@"
+alacritty "$@"
 
 # for urxvt
 #if [ $# == 3 ] && [ "${1}" == "--" ]; then

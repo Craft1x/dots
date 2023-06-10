@@ -19,6 +19,6 @@ elif [ $DATA -ge 17 ]; then
   ICON=""
 fi
 
-echo "%{A1:kitty btop:} %{F$COLOR}$ICON%{F-} $DATA"%{A}
+echo "%{A1:~/.config/terminal.sh btop:} %{F$COLOR}$ICON%{F-} $DATA"%{A}
 sleep 1
 done

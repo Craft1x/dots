@@ -27,4 +27,4 @@ if [[ ! -f /tmp/player-info ]]; then
 fi
 
 
-[[ -f /tmp/player-info ]] && cat /tmp/player-info
+[[ -f /tmp/player-info ]] && cat /tmp/player-info 2>/dev/null

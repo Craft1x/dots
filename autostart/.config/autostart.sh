@@ -40,10 +40,10 @@ run dunst
 run warpd
 
 # preload alacritty to save start time
-run alacritty -o "window.class=hidden_window" --hold -e xdo hide
+# run alacritty -o "window.class=hidden_window" --hold -e xdo hide
 
 # preload nemo to save start time
-run ~/.config/i3/preload_nemo.sh
+# run ~/.config/i3/preload_nemo.sh
 
 # Start greenclip daemon
 run greenclip daemon
