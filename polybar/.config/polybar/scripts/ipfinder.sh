@@ -101,9 +101,18 @@ while :; do
 
     # printf "%-23s\n" "$(echo $status $ip [$country])"
     #
+    #
+    
+    COUNTRY_DATA=`jq ".[] | select(.code==\"$country\")" $HOME/.config/polybar/scripts/countries.json`
+    FLAG=$(echo "$COUNTRY_DATA" | jq -r '.emoji')
+    COUNTRY_NAME=$(echo "$COUNTRY_DATA" | jq -r '.name')
+
+    echo "$FLAG $COUNTRY_NAME" > /tmp/ip
+    echo ${ip}  >> /tmp/ip
+
     COLOR="${green}"
     echo $separator "%{F$COLOR}$status%{F-}"
-    echo "${ip}" > /tmp/ip
+  
     previous_interface_state="$(interface_state)"
     previous_uplinks=$(uplinks)
     previous_connection_status=$(connected)
