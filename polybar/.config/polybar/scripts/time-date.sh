@@ -21,5 +21,5 @@ echo "$separator%{A1:gnome-calendar:} \
 %{F$COLOR3}${MONTH}%{F-} \
 %{F$COLOR4}%{T1}${TIME}%{A}%{T-}%{F-}"
 
-sleep 1
+sleep 60
 done

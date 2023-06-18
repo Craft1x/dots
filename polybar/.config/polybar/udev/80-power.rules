@@ -1,0 +1,2 @@
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_STATUS}=="Charging", RUN+="/home/craftix/.config/polybar/scripts/laptop-charge.sh --update"
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_STATUS}=="Discharging", RUN+="/home/craftix/.config/polybar/scripts/laptop-charge.sh --update"
