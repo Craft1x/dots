@@ -64,10 +64,15 @@ run numlockx
 
 #hide sidebar in nemo
 run gsettings set org.nemo.window-state start-with-sidebar false 
+
 #bar
 run ~/.config/polybar/launch.sh
 
+run ~/.config/i3/alternating_layouts.py
+
 run ~/.config/i3/alternating_layouts.py 
+
+run ~/.config/i3/shift_watcher.py
 
 run ~/.config/i3/layout-manager.py
 

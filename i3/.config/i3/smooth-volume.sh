@@ -4,7 +4,7 @@ VOLUME_MAX=130
 
 SINK_OR_SOURCE="ink"
 
-VOLUME_STEP=5
+VOLUME_STEP=1
 
 function getCurNode() {
     if ! pactl info &>/dev/null; then return 1; fi
@@ -28,8 +28,8 @@ function volUp() {
 
     STEP=$VOLUME_STEP
 
-    if [ "$VOL_LEVEL" -le 10 ]; then
-      STEP=1
+    if [ -f "/tmp/shift" ]; then
+      STEP=5
     fi
 
     if [ "$VOL_LEVEL" -le "$VOLUME_MAX" ] && [ "$VOL_LEVEL" -ge "$maxLimit" ]; then
@@ -50,8 +50,8 @@ function volDown() {
 
     STEP=$VOLUME_STEP
 
-    if [ "$VOL_LEVEL" -le 10 ]; then
-      STEP=1
+    if [ -f "/tmp/shift" ]; then
+      STEP=5
     fi
 
     pactl set-s${SINK_OR_SOURCE}-volume "$curNode" "-$STEP%"
