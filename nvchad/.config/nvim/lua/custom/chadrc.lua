@@ -1,23 +1,11 @@
--- Just an example, supposed to be placed in /lua/custom/
---
+-- First read our docs (completely) then check the example_config repo
+
 local M = {}
-
--- make sure you maintain the structure of `core/default_config.lua` here,
--- example of changing theme:
-
---M.ui = {
- --  theme = "gruvchad",
---}
-
--- M.mappings = {
-   -- custom = {}, -- custom user mappings
-
-   -- misc = {
-   --    copy_whole_file = "<leader>a" -- copy all contents of current buffer
- --   }
- -- }
-
-M.plugins = {
-   user = require "custom.plugins"
+M.ui = {
+  transparency = true,
+  theme = "onedark",
 }
+
+M.plugins = "custom.plugins"
+
 return M

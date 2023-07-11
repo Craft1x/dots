@@ -38,7 +38,7 @@ case $1 in
   sided)
     i3-msg gaps outer current set 0, \
       gaps inner current set 20, \
-      gaps right current set `dp 65` 
+      gaps right current set `dp 65`
           ;;
 
   zoomed)

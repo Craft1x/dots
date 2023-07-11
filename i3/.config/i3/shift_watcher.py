@@ -2,7 +2,7 @@
 
 from pynput.keyboard import Key, Listener
 import os
- 
+
 def press(key):
     if key == Key.shift:
         f = open("/tmp/shift", "w")
@@ -15,6 +15,6 @@ def release(key):
             os.remove("/tmp/shift")
         except OSError:
             pass
- 
+
 with Listener(on_press = press, on_release = release) as listener:
     listener.join()
