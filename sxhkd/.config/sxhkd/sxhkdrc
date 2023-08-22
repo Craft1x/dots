@@ -36,7 +36,7 @@ mod4 + ctrl + {j,k,Down,Up}
   brillo -u 100000 -q {-A,-U} 10 && ~/.config/i3/notify_brightness.sh
 
 mod4 + Tab
-  ~/.config/i3/i3-cycle-windows 
+  ~/.config/i3/i3-cycle-windows
 
 mod4 + shift + Tab
   i3-msg workspace next

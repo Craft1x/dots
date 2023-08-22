@@ -10,7 +10,8 @@ def press(key):
         f.close()
 
 def release(key):
-    if str(key) == "<65034>":
+    # print(key)
+    if key == Key.shift or str(key) == "<65034>":
         try:
             os.remove("/tmp/shift")
         except OSError:

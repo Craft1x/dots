@@ -13,8 +13,8 @@
 }
 
 @-moz-document url("about:newtab") {
-	body{background-color:#272a34!important;}
-	.search-handoff-button {background-color:#2d3039!important;}
+	body{background-color:#242424!important;}
+	.search-handoff-button {background-color:#2a2a2a!important;}
 }
 
 @-moz-document regexp("(.*?)"){

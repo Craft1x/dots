@@ -1,7 +1,7 @@
-local Element = require('uosc_shared/elements/Element')
-local Button = require('uosc_shared/elements/Button')
-local CycleButton = require('uosc_shared/elements/CycleButton')
-local Speed = require('uosc_shared/elements/Speed')
+local Element = require('elements/Element')
+local Button = require('elements/Button')
+local CycleButton = require('elements/CycleButton')
+local Speed = require('elements/Speed')
 
 -- `scale` - `options.controls_size` scale factor.
 -- `ratio` - Width/height ratio of a static or dynamic element.
@@ -65,7 +65,7 @@ function Controls:init()
 	for i, item in ipairs(items) do
 		local config = shorthands[item.config] and shorthands[item.config] or item.config
 		local config_tooltip = split(config, ' *%? *')
-		local tooltip = config_tooltip[2]
+		local tooltip = t(config_tooltip[2])
 		config = shorthands[config_tooltip[1]]
 			and split(shorthands[config_tooltip[1]], ' *%? *')[1] or config_tooltip[1]
 		local config_badge = split(config, ' *# *')

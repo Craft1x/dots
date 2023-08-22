@@ -8,7 +8,7 @@
 @namespace html url("http://www.w3.org/1999/xhtml");
 
 tabbrowser tabpanels { background-color: rgb(226,25,20) !important; }
-browser { background-color: #272a34 !important; }
+browser { background-color: #242424 !important; }
 
 #contentAreaContextMenu {
 	background-color:#23252e !important;

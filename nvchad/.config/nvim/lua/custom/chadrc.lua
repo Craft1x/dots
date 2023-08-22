@@ -3,7 +3,7 @@
 local M = {}
 M.ui = {
   transparency = true,
-  theme = "onedark",
+  theme = "github_dark",
 }
 
 M.plugins = "custom.plugins"

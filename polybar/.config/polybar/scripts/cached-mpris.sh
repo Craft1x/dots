@@ -9,9 +9,9 @@ if [[ ! -f /tmp/player-info ]]; then
 
   echo $MATCH > /tmp/player-info
 
-  echo $MATCH
+  # echo $MATCH
 
-  if [ $MATCH = "Nothing" ];  then
+  if [ "$MATCH" = "Nothing" ];  then
     echo ""  >> /tmp/player-info
 
     echo ""
