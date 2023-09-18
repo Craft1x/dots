@@ -71,6 +71,9 @@ mod4 + shift + w
 mod4  + Return
   alacritty --working-directory ~
 
+mod4 +shift + M
+  sleep 0.2 && xset dpms force standby
+
 mod4 + shift + Return
   urxvt -cd ~
 

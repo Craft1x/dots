@@ -66,17 +66,17 @@ get_info() {
 
     # if not "icon", display information and return
     if [ "$2" != "icon" ]; then
-        artist=$(extract_meta artist)
-        [ -z "$artist" ] && artist=$(extract_meta albumArtist)
+        # artist=$(extract_meta artist)
+        # [ -z "$artist" ] && artist=$(extract_meta albumArtist)
+        #
+        # if [ -n "$artist" ]; then
+        #     album=$(extract_meta album)
+        #     [ -n "$album" ] && echo -n "  $album /"
+        #
+        #     echo -n " ﴁ $artist / "
+        # fi
 
-        if [ -n "$artist" ]; then
-            album=$(extract_meta album)
-            [ -n "$album" ] && echo -n "  $album /"
-
-            echo -n " ﴁ $artist / "
-        fi
-
-        echo $title 
+        echo $title
         return 0
     fi
 
