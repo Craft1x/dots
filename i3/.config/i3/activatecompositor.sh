@@ -6,7 +6,7 @@ case "$1" in
     ;;
 
   "true")
-    picom --backend glx -b
+    picom --backend xrender -b
     ;;
 
   "false")

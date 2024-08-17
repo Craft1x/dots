@@ -21,7 +21,7 @@ floating_modifier $mod
 gaps inner 15
 gaps outer 0
 
-set $bg-color 	         #ffaa99
+set $bg-color            #ffbb99
 set $inactive-bg-color   #272a34
 set $text-color          #1a1c21
 set $inactive-text-color #676E7D
@@ -48,6 +48,7 @@ for_window [class="Blueberry.py"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Ulauncher"] floating enable
 for_window [class="Gcolor3"] floating enable
+for_window [class="Gpick"] floating enable
 for_window [class="gnome-calculator"] floating enable
 for_window [class="org.gnome.clocks"] floating enable
 # for_window [title="^About.*"] floating enable
@@ -70,4 +71,5 @@ for_window [class="flameshot"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Input-remapper-gtk"] floating enable
 for_window [title="hidden_window$"] move container to scratchpad, floating enable
+# for_window [class="hidden_window_firefox$"] move container to scratchpad, floating enable
 for_window [title="hidden_window_nemo$"] floating enable

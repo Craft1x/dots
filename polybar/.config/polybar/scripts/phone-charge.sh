@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-source "$HOME/.config/polybar/scripts/source-colors.sh" 
+source "$HOME/.config/polybar/scripts/source-colors.sh"
 
-ID="8f54298fa462dd30"
+ID="82f21110_aa69_49e6_a66d_0350a65c1eb6"
 
 DATA=$(qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.charge) ||  (echo "" && exit 0);
 ISCHARGING=$(qdbus org.kde.kdeconnect /modules/kdeconnect/devices/$ID/battery org.kde.kdeconnect.device.battery.isCharging)
 
 if [ "$DATA" -le 0 ]; then
-  echo "" && exit 0; 
+  echo "" && exit 0;
 fi
 
 COLOR="${green}"
@@ -18,21 +18,21 @@ if [ $DATA -ge 95 ]; then
 	ICON=""
 elif [ $DATA -ge 85 ]; then
 	ICON=""
-elif [ $DATA -ge 75 ]; then 
+elif [ $DATA -ge 75 ]; then
 	ICON=""
-elif [ $DATA -ge 65 ]; then 
+elif [ $DATA -ge 65 ]; then
 	ICON=""
-elif [ $DATA -ge 55 ]; then 
+elif [ $DATA -ge 55 ]; then
 	ICON=""
-elif [ $DATA -ge 45 ]; then 
+elif [ $DATA -ge 45 ]; then
 	ICON=""
-elif [ $DATA -ge 35 ]; then 
+elif [ $DATA -ge 35 ]; then
 	ICON=""
-elif [ $DATA -ge 25 ]; then 
+elif [ $DATA -ge 25 ]; then
 	ICON=""
-elif [ $DATA -ge 15 ]; then 
+elif [ $DATA -ge 15 ]; then
 	ICON=""
-elif [ $DATA -ge 5 ]; then 
+elif [ $DATA -ge 5 ]; then
 	ICON=""
 fi
 
@@ -41,15 +41,15 @@ if [ $DATA -ge 95 ]; then
 	ICON=""
 elif [ $DATA -ge 80 ]; then
 	ICON=""
-elif [ $DATA -ge 65 ]; then 
+elif [ $DATA -ge 65 ]; then
 	ICON=""
-elif [ $DATA -ge 50 ]; then 
+elif [ $DATA -ge 50 ]; then
 	ICON=""
-elif [ $DATA -ge 35 ]; then 
+elif [ $DATA -ge 35 ]; then
 	ICON=""
-elif [ $DATA -ge 20 ]; then 
+elif [ $DATA -ge 20 ]; then
 	ICON=""
-elif [ $DATA -ge 5 ]; then 
+elif [ $DATA -ge 5 ]; then
 	ICON=""
 fi
 fi

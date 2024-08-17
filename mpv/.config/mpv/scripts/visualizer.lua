@@ -65,7 +65,7 @@ local function get_visualizer(name, quality, vtrack, albumart)
   h = w
 
 
-  return "[aid1] asplit [ao],afifo,aformat=sample_rates=192000,avectorscope=size="..w.."x"..h..":mode=lissajous_xy:scale=lin:mirror=y:rf=255:gf=255:bf=255:af=255:rc=40:gc=160:bc=80:ac=255:draw=line:r="..fps..",format=rgb0 [vo]"
+  return "[aid1] asplit [ao],aformat=sample_rates=192000,avectorscope=size="..w.."x"..h..":mode=lissajous_xy:scale=lin:mirror=y:rf=255:gf=255:bf=255:af=255:rc=40:gc=160:bc=80:ac=255:draw=line:r="..fps..",format=rgb0 [vo]"
 end
 
 was_enabled = false

@@ -29,6 +29,7 @@ run hsetroot -solid "#000000" && run ~/.config/nitrogen/set-random-wallpaper.sh
 
 # add picom for shadows and animtaions
 run ~/.config/i3/activatecompositor.sh true
+# run xcompmgr -c -C
 
 
 # start polkit
@@ -43,10 +44,12 @@ run warpd
 # run alacritty -o "window.class=hidden_window" --hold -e xdo hide
 
 # preload nemo to save start time
-# run ~/.config/i3/preload_nemo.sh
+run ~/.config/i3/preload_nemo.sh
+# run ~/.config/i3/preload_firefox.sh
 
 # Start greenclip daemon
-run greenclip daemon
+# run greenclip daemon
+run clipcatd
 
 # Hide the mouse after no movement
 run unclutter 
@@ -60,7 +63,7 @@ command -v optimus-manager-qt && run optimus-manager-qt
 # command -v conky && run ~/.conky/conky-startup.sh 
 
 #enable num lock 
-run numlockx 
+run numlockx
 
 #hide sidebar in nemo
 run gsettings set org.nemo.window-state start-with-sidebar false 
@@ -69,8 +72,6 @@ run gsettings set org.nemo.window-state start-with-sidebar false
 run ~/.config/polybar/launch.sh
 
 run ~/.config/i3/alternating_layouts.py
-
-run ~/.config/i3/alternating_layouts.py 
 
 run ~/.config/i3/shift_watcher.py
 

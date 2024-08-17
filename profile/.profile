@@ -7,6 +7,10 @@ export TERMINAL=/usr/bin/alacritty
 PATH=$PATH:$HOME/.cargo/bin
 PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
 
+#AI
+export PATH=/opt/rocm/bin:$PATH
+# export HSA_OVERRIDE_GFX_VERSION=10.3.0 HCC_AMDGPU_TARGET=gfx1030
+
 # export GTK_THEME=Flat-Remix-Green
 export GTK_THEME=Adwaita:dark
 

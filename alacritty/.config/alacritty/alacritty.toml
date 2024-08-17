@@ -1,0 +1,39 @@
+[colors.bright]
+black = "#959DCB"
+blue = "#82AAFF"
+cyan = "#676E95"
+green = "#C3E88D"
+magenta = "#FFCB6B"
+red = "#F07178"
+white = "#FFFEFE"
+yellow = "#FF5572"
+
+[colors.normal]
+black = "#292D3E"
+blue = "#75A1FF"
+cyan = "#60BAEC"
+green = "#62DE84"
+magenta = "#F580FF"
+red = "#F07178"
+white = "#ABB2BF"
+yellow = "#FFCB6B"
+
+[colors.primary]
+background = "#242424"
+foreground = "#BFC7D5"
+
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "FiraCode Nerd Font"
+
+[window]
+opacity = 1
+
+[window.padding]
+x = 6
+y = 6

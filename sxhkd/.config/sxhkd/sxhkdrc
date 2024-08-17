@@ -84,13 +84,13 @@ alt + m
   kotatogram-desktop
 
 alt + f
-  firefox-developer-edition -profile $FIREFOX_PROFILE
+  firefox-developer-edition -profile $FIREFOX_PROFILE --class "browser"
 
 alt + h
   chromium  --app=https://www.deepl.com/translator --force-app-mode
 
 alt + {d,e,t}
-  nemo {~/Downloads,~,"`mktemp -d --suffix=' 🔴'`"}
+  nemo {~/Downloads,~,"`mkdir /tmp/temporaryDirs -p; mktemp -d -p /tmp/temporaryDirs`"}
 
 mod4 + {_,shift+}apostrophe
   i3-msg sticky {enable && notify-send -r 971 "Sticky",disable && notify-send -r 971 "Un-Sticky"}

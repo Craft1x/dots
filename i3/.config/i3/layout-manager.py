@@ -18,11 +18,11 @@ def on_window_focus(i3, e):
 
     ws = focused.workspace().num
 
-    if ws == 5:
-        if count > 1:
-            subprocess.Popen(['.config/i3/gaps.sh', 'default'], cwd=pathlib.Path.home())
-        else:
-            subprocess.Popen(['.config/i3/gaps.sh', 'sided'], cwd=pathlib.Path.home())
+    # if ws == 5:
+    #     if count > 1:
+    #         subprocess.Popen(['.config/i3/gaps.sh', 'default'], cwd=pathlib.Path.home())
+    #     else:
+    #         subprocess.Popen(['.config/i3/gaps.sh', 'sided'], cwd=pathlib.Path.home())
 
     # ws_name = "%s:%s" % (focused.workspace().num, focused.window_class)
     # i3.command('rename workspace to "%s"' % ws_name)
